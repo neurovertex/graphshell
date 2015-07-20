@@ -1,2 +1,6 @@
 *.user
 *.o
+*.pro.user*
+*.dia
+*~
+*.autosave
