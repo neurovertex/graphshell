@@ -10,7 +10,7 @@ This was inspired from various software, like [Coregraphe](http://doc.aldebaran.
 
 Here's an example: You have a file with newline-separated links and want to download every file. In bash, that would be something like ```cat links.txt | (while read link; do wget "$link"; done) |& sed -rne 's/^.*‘(.*)’.*saved.*$/\1/p'``` (wget outputs to stderr)
 
-[![Example1](https://raw.githubusercontent.com/neurovertex/graphshell/master/doc/Example1.png)](https://raw.githubusercontent.com/neurovertex/graphshell/master/doc/Example1.svg)
+![Example1](https://raw.githubusercontent.com/neurovertex/graphshell/master/doc/Example1.png)
 
 We can see three kind of elements here :
 * Boxes, which can do anything you want, really.
