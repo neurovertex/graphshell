@@ -10,7 +10,7 @@ This was inspired from various software, like [Coregraphe](http://doc.aldebaran.
 
 Here's an example: You have a file with newline-separated links and want to download every file. In bash, that would be something like ```cat links.txt | (while read link; do wget "$link"; done) |& sed -rne 's/^.*‘(.*)’.*saved.*$/\1/p'``` (wget outputs to stderr)
 
-![Example1](https://raw.githubusercontent.com/neurovertex/graphshell/master/doc/Example1.svg)
+[![Example1](https://raw.githubusercontent.com/neurovertex/graphshell/master/doc/Example1.png)](https://raw.githubusercontent.com/neurovertex/graphshell/master/doc/Example1.svg)
 
 We can see three kind of elements here :
 * Boxes, which can do anything you want, really.
@@ -18,7 +18,7 @@ We can see three kind of elements here :
 * Pipes. They link stuff.
 
 So that's supposed to do the same thing as the command, so what's the point ? Well here's non-exhaustive list of thing it adds:
-* Ever tried to do non-linear piping chain (like split the pipeline in two or something) in a shell ? Pain. Waaaay easier with a GUI
+* Ever tried to do non-linear piping chain (like split the pipeline in two or something) in a shell ? It's a pain, because it's a command-*line* interface, thus it's by nature linear. GUI don't have that limitation.
 * Arbitrary number of inputs/outputs with actual typing. It's true text streams are a universal interface, but sometimes being able to send more complex kinds of data can be cool too.
 * Hot-Swappable pipes! Change the redirections while your stuff is running. You definitively can't do that (*easily*)  in a CLI.
 * Ability to save complex configuration
