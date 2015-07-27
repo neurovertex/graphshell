@@ -1,618 +1,614 @@
 <RCC>
     <qresource prefix="/icons">
-        <file alias="toolbar/acrobat.svg">Breeze/actions/toolbar/acrobat.svg</file>
-        <file alias="toolbar/address-book-new.svg">Breeze/actions/toolbar/address-book-new.svg</file>
-        <file alias="toolbar/align-horizontal-bottom-out.svg">Breeze/actions/toolbar/align-horizontal-bottom-out.svg</file>
-        <file alias="toolbar/align-horizontal-center.svg">Breeze/actions/toolbar/align-horizontal-center.svg</file>
-        <file alias="toolbar/align-horizontal-left-out.svg">Breeze/actions/toolbar/align-horizontal-left-out.svg</file>
-        <file alias="toolbar/align-horizontal-left.svg">Breeze/actions/toolbar/align-horizontal-left.svg</file>
-        <file alias="toolbar/align-horizontal-right-out.svg">Breeze/actions/toolbar/align-horizontal-right-out.svg</file>
-        <file alias="toolbar/align-horizontal-right.svg">Breeze/actions/toolbar/align-horizontal-right.svg</file>
-        <file alias="toolbar/align-horizontal-top-out.svg">Breeze/actions/toolbar/align-horizontal-top-out.svg</file>
-        <file alias="toolbar/align-vertical-bottom-out.svg">Breeze/actions/toolbar/align-vertical-bottom-out.svg</file>
-        <file alias="toolbar/align-vertical-bottom.svg">Breeze/actions/toolbar/align-vertical-bottom.svg</file>
-        <file alias="toolbar/align-vertical-center.svg">Breeze/actions/toolbar/align-vertical-center.svg</file>
-        <file alias="toolbar/align-vertical-top-out.svg">Breeze/actions/toolbar/align-vertical-top-out.svg</file>
-        <file alias="toolbar/align-vertical-top.svg">Breeze/actions/toolbar/align-vertical-top.svg</file>
-        <file alias="toolbar/application-exit.svg">Breeze/actions/toolbar/application-exit.svg</file>
-        <file alias="toolbar/application-menu.svg">Breeze/actions/toolbar/application-menu.svg</file>
-        <file alias="toolbar/appointment-new.svg">Breeze/actions/toolbar/appointment-new.svg</file>
-        <file alias="toolbar/archive-extract.svg">Breeze/actions/toolbar/archive-extract.svg</file>
-        <file alias="toolbar/archive-insert-directory.svg">Breeze/actions/toolbar/archive-insert-directory.svg</file>
-        <file alias="toolbar/archive-insert.svg">Breeze/actions/toolbar/archive-insert.svg</file>
-        <file alias="toolbar/archive-remove.svg">Breeze/actions/toolbar/archive-remove.svg</file>
-        <file alias="toolbar/arrow-down-double.svg">Breeze/actions/toolbar/arrow-down-double.svg</file>
-        <file alias="toolbar/arrow-down.svg">Breeze/actions/toolbar/arrow-down.svg</file>
-        <file alias="toolbar/arrow-left-double.svg">Breeze/actions/toolbar/arrow-left-double.svg</file>
-        <file alias="toolbar/arrow-left.svg">Breeze/actions/toolbar/arrow-left.svg</file>
-        <file alias="toolbar/arrow-right-double.svg">Breeze/actions/toolbar/arrow-right-double.svg</file>
-        <file alias="toolbar/arrow-right.svg">Breeze/actions/toolbar/arrow-right.svg</file>
-        <file alias="toolbar/arrow-up-double.svg">Breeze/actions/toolbar/arrow-up-double.svg</file>
-        <file alias="toolbar/arrow-up.svg">Breeze/actions/toolbar/arrow-up.svg</file>
-        <file alias="toolbar/auto-scale-all.svg">Breeze/actions/toolbar/auto-scale-all.svg</file>
-        <file alias="toolbar/auto-scale-x.svg">Breeze/actions/toolbar/auto-scale-x.svg</file>
-        <file alias="toolbar/auto-scale-y.svg">Breeze/actions/toolbar/auto-scale-y.svg</file>
-        <file alias="toolbar/axis-horizontal.svg">Breeze/actions/toolbar/axis-horizontal.svg</file>
-        <file alias="toolbar/axis-vertical.svg">Breeze/actions/toolbar/axis-vertical.svg</file>
-        <file alias="toolbar/bookmark-new-list.svg">Breeze/actions/toolbar/bookmark-new-list.svg</file>
-        <file alias="toolbar/bookmark-new.svg">Breeze/actions/toolbar/bookmark-new.svg</file>
-        <file alias="toolbar/bookmark-toolbar.svg">Breeze/actions/toolbar/bookmark-toolbar.svg</file>
-        <file alias="toolbar/bookmarks-organize.svg">Breeze/actions/toolbar/bookmarks-organize.svg</file>
-        <file alias="toolbar/call-start.svg">Breeze/actions/toolbar/call-start.svg</file>
-        <file alias="toolbar/call-stop.svg">Breeze/actions/toolbar/call-stop.svg</file>
-        <file alias="toolbar/cartesian-plot-four-axes.svg">Breeze/actions/toolbar/cartesian-plot-four-axes.svg</file>
-        <file alias="toolbar/cartesian-plot-two-axes-centered-origin.svg">Breeze/actions/toolbar/cartesian-plot-two-axes-centered-origin.svg</file>
-        <file alias="toolbar/cartesian-plot-two-axes-centered.svg">Breeze/actions/toolbar/cartesian-plot-two-axes-centered.svg</file>
-        <file alias="toolbar/cartesian-plot-two-axes.svg">Breeze/actions/toolbar/cartesian-plot-two-axes.svg</file>
-        <file alias="toolbar/character-set.svg">Breeze/actions/toolbar/character-set.svg</file>
-        <file alias="toolbar/checkbox.svg">Breeze/actions/toolbar/checkbox.svg</file>
-        <file alias="toolbar/chronometer-lap.svg">Breeze/actions/toolbar/chronometer-lap.svg</file>
-        <file alias="toolbar/chronometer-pause.svg">Breeze/actions/toolbar/chronometer-pause.svg</file>
-        <file alias="toolbar/chronometer-reset.svg">Breeze/actions/toolbar/chronometer-reset.svg</file>
-        <file alias="toolbar/chronometer-start.svg">Breeze/actions/toolbar/chronometer-start.svg</file>
-        <file alias="toolbar/chronometer.svg">Breeze/actions/toolbar/chronometer.svg</file>
-        <file alias="toolbar/code-block.svg">Breeze/actions/toolbar/code-block.svg</file>
-        <file alias="toolbar/code-class.svg">Breeze/actions/toolbar/code-class.svg</file>
-        <file alias="toolbar/code-context.svg">Breeze/actions/toolbar/code-context.svg</file>
-        <file alias="toolbar/code-function.svg">Breeze/actions/toolbar/code-function.svg</file>
-        <file alias="toolbar/code-typedef.svg">Breeze/actions/toolbar/code-typedef.svg</file>
-        <file alias="toolbar/code-variable.svg">Breeze/actions/toolbar/code-variable.svg</file>
-        <file alias="toolbar/color-picker-black.svg">Breeze/actions/toolbar/color-picker-black.svg</file>
-        <file alias="toolbar/color-picker-grey.svg">Breeze/actions/toolbar/color-picker-grey.svg</file>
-        <file alias="toolbar/color-picker-white.svg">Breeze/actions/toolbar/color-picker-white.svg</file>
-        <file alias="toolbar/color-picker.svg">Breeze/actions/toolbar/color-picker.svg</file>
-        <file alias="toolbar/configure-shortcuts.svg">Breeze/actions/toolbar/configure-shortcuts.svg</file>
-        <file alias="toolbar/configure-toolbars.svg">Breeze/actions/toolbar/configure-toolbars.svg</file>
-        <file alias="toolbar/configure.svg">Breeze/actions/toolbar/configure.svg</file>
-        <file alias="toolbar/contact-new.svg">Breeze/actions/toolbar/contact-new.svg</file>
-        <file alias="toolbar/cursor-arrow.svg">Breeze/actions/toolbar/cursor-arrow.svg</file>
-        <file alias="toolbar/dashboard-show.svg">Breeze/actions/toolbar/dashboard-show.svg</file>
-        <file alias="toolbar/database-index.svg">Breeze/actions/toolbar/database-index.svg</file>
-        <file alias="toolbar/debug-execute-from-cursor.svg">Breeze/actions/toolbar/debug-execute-from-cursor.svg</file>
-        <file alias="toolbar/debug-execute-to-cursor.svg">Breeze/actions/toolbar/debug-execute-to-cursor.svg</file>
-        <file alias="toolbar/debug-run-cursor.svg">Breeze/actions/toolbar/debug-run-cursor.svg</file>
-        <file alias="toolbar/debug-run.svg">Breeze/actions/toolbar/debug-run.svg</file>
-        <file alias="toolbar/debug-step-instruction.svg">Breeze/actions/toolbar/debug-step-instruction.svg</file>
-        <file alias="toolbar/debug-step-into-instruction.svg">Breeze/actions/toolbar/debug-step-into-instruction.svg</file>
-        <file alias="toolbar/debug-step-into.svg">Breeze/actions/toolbar/debug-step-into.svg</file>
-        <file alias="toolbar/debug-step-out.svg">Breeze/actions/toolbar/debug-step-out.svg</file>
-        <file alias="toolbar/debug-step-over.svg">Breeze/actions/toolbar/debug-step-over.svg</file>
-        <file alias="toolbar/dialog-cancel.svg">Breeze/actions/toolbar/dialog-cancel.svg</file>
-        <file alias="toolbar/dialog-close.svg">Breeze/actions/toolbar/dialog-close.svg</file>
-        <file alias="toolbar/dialog-ok-apply.svg">Breeze/actions/toolbar/dialog-ok-apply.svg</file>
-        <file alias="toolbar/dialog-ok.svg">Breeze/actions/toolbar/dialog-ok.svg</file>
-        <file alias="toolbar/distribute-horizontal-center.svg">Breeze/actions/toolbar/distribute-horizontal-center.svg</file>
-        <file alias="toolbar/distribute-horizontal-equal.svg">Breeze/actions/toolbar/distribute-horizontal-equal.svg</file>
-        <file alias="toolbar/distribute-horizontal-left.svg">Breeze/actions/toolbar/distribute-horizontal-left.svg</file>
-        <file alias="toolbar/distribute-horizontal-margin.svg">Breeze/actions/toolbar/distribute-horizontal-margin.svg</file>
-        <file alias="toolbar/distribute-horizontal-page.svg">Breeze/actions/toolbar/distribute-horizontal-page.svg</file>
-        <file alias="toolbar/distribute-horizontal-right.svg">Breeze/actions/toolbar/distribute-horizontal-right.svg</file>
-        <file alias="toolbar/distribute-horizontal-x.svg">Breeze/actions/toolbar/distribute-horizontal-x.svg</file>
-        <file alias="toolbar/distribute-vertical-bottom.svg">Breeze/actions/toolbar/distribute-vertical-bottom.svg</file>
-        <file alias="toolbar/distribute-vertical-center.svg">Breeze/actions/toolbar/distribute-vertical-center.svg</file>
-        <file alias="toolbar/distribute-vertical-equal.svg">Breeze/actions/toolbar/distribute-vertical-equal.svg</file>
-        <file alias="toolbar/distribute-vertical-margin.svg">Breeze/actions/toolbar/distribute-vertical-margin.svg</file>
-        <file alias="toolbar/distribute-vertical-page.svg">Breeze/actions/toolbar/distribute-vertical-page.svg</file>
-        <file alias="toolbar/distribute-vertical-top.svg">Breeze/actions/toolbar/distribute-vertical-top.svg</file>
-        <file alias="toolbar/distribute-vertical-y.svg">Breeze/actions/toolbar/distribute-vertical-y.svg</file>
-        <file alias="toolbar/document-close.svg">Breeze/actions/toolbar/document-close.svg</file>
-        <file alias="toolbar/document-decrypt.svg">Breeze/actions/toolbar/document-decrypt.svg</file>
-        <file alias="toolbar/document-edit-decrypt-verify.svg">Breeze/actions/toolbar/document-edit-decrypt-verify.svg</file>
-        <file alias="toolbar/document-edit-decrypt.svg">Breeze/actions/toolbar/document-edit-decrypt.svg</file>
-        <file alias="toolbar/document-edit-encrypt.svg">Breeze/actions/toolbar/document-edit-encrypt.svg</file>
-        <file alias="toolbar/document-edit-sign-encrypt.svg">Breeze/actions/toolbar/document-edit-sign-encrypt.svg</file>
-        <file alias="toolbar/document-edit-sign.svg">Breeze/actions/toolbar/document-edit-sign.svg</file>
-        <file alias="toolbar/document-edit-verify.svg">Breeze/actions/toolbar/document-edit-verify.svg</file>
-        <file alias="toolbar/document-edit.svg">Breeze/actions/toolbar/document-edit.svg</file>
-        <file alias="toolbar/document-encrypt.svg">Breeze/actions/toolbar/document-encrypt.svg</file>
-        <file alias="toolbar/document-encrypted.svg">Breeze/actions/toolbar/document-encrypted.svg</file>
-        <file alias="toolbar/document-export-table.svg">Breeze/actions/toolbar/document-export-table.svg</file>
-        <file alias="toolbar/document-export.svg">Breeze/actions/toolbar/document-export.svg</file>
-        <file alias="toolbar/document-import.svg">Breeze/actions/toolbar/document-import.svg</file>
-        <file alias="toolbar/document-new.svg">Breeze/actions/toolbar/document-new.svg</file>
-        <file alias="toolbar/document-open-folder.svg">Breeze/actions/toolbar/document-open-folder.svg</file>
-        <file alias="toolbar/document-open-recent.svg">Breeze/actions/toolbar/document-open-recent.svg</file>
-        <file alias="toolbar/document-open-remote.svg">Breeze/actions/toolbar/document-open-remote.svg</file>
-        <file alias="toolbar/document-open.svg">Breeze/actions/toolbar/document-open.svg</file>
-        <file alias="toolbar/document-preview-archive.svg">Breeze/actions/toolbar/document-preview-archive.svg</file>
-        <file alias="toolbar/document-preview.svg">Breeze/actions/toolbar/document-preview.svg</file>
-        <file alias="toolbar/document-print-direct.svg">Breeze/actions/toolbar/document-print-direct.svg</file>
-        <file alias="toolbar/document-print-frame.svg">Breeze/actions/toolbar/document-print-frame.svg</file>
-        <file alias="toolbar/document-print-preview.svg">Breeze/actions/toolbar/document-print-preview.svg</file>
-        <file alias="toolbar/document-print.svg">Breeze/actions/toolbar/document-print.svg</file>
-        <file alias="toolbar/document-properties.svg">Breeze/actions/toolbar/document-properties.svg</file>
-        <file alias="toolbar/document-revert.svg">Breeze/actions/toolbar/document-revert.svg</file>
-        <file alias="toolbar/document-save-all.svg">Breeze/actions/toolbar/document-save-all.svg</file>
-        <file alias="toolbar/document-save-as.svg">Breeze/actions/toolbar/document-save-as.svg</file>
-        <file alias="toolbar/document-save.svg">Breeze/actions/toolbar/document-save.svg</file>
-        <file alias="toolbar/document-share.svg">Breeze/actions/toolbar/document-share.svg</file>
-        <file alias="toolbar/document-sign.svg">Breeze/actions/toolbar/document-sign.svg</file>
-        <file alias="toolbar/documentation.svg">Breeze/actions/toolbar/documentation.svg</file>
-        <file alias="toolbar/documentinfo.svg">Breeze/actions/toolbar/documentinfo.svg</file>
-        <file alias="toolbar/download-later.svg">Breeze/actions/toolbar/download-later.svg</file>
-        <file alias="toolbar/download.svg">Breeze/actions/toolbar/download.svg</file>
-        <file alias="toolbar/draw-arrow-back.svg">Breeze/actions/toolbar/draw-arrow-back.svg</file>
-        <file alias="toolbar/draw-arrow-down.svg">Breeze/actions/toolbar/draw-arrow-down.svg</file>
-        <file alias="toolbar/draw-arrow-forward.svg">Breeze/actions/toolbar/draw-arrow-forward.svg</file>
-        <file alias="toolbar/draw-arrow-up.svg">Breeze/actions/toolbar/draw-arrow-up.svg</file>
-        <file alias="toolbar/draw-bezier-curves.svg">Breeze/actions/toolbar/draw-bezier-curves.svg</file>
-        <file alias="toolbar/draw-brush.svg">Breeze/actions/toolbar/draw-brush.svg</file>
-        <file alias="toolbar/draw-circle.svg">Breeze/actions/toolbar/draw-circle.svg</file>
-        <file alias="toolbar/draw-cross.svg">Breeze/actions/toolbar/draw-cross.svg</file>
-        <file alias="toolbar/draw-donut.svg">Breeze/actions/toolbar/draw-donut.svg</file>
-        <file alias="toolbar/draw-ellipse.svg">Breeze/actions/toolbar/draw-ellipse.svg</file>
-        <file alias="toolbar/draw-eraser.svg">Breeze/actions/toolbar/draw-eraser.svg</file>
-        <file alias="toolbar/draw-freehand.svg">Breeze/actions/toolbar/draw-freehand.svg</file>
-        <file alias="toolbar/draw-halfcircle1.svg">Breeze/actions/toolbar/draw-halfcircle1.svg</file>
-        <file alias="toolbar/draw-halfcircle2.svg">Breeze/actions/toolbar/draw-halfcircle2.svg</file>
-        <file alias="toolbar/draw-halfcircle3.svg">Breeze/actions/toolbar/draw-halfcircle3.svg</file>
-        <file alias="toolbar/draw-halfcircle4.svg">Breeze/actions/toolbar/draw-halfcircle4.svg</file>
-        <file alias="toolbar/draw-line.svg">Breeze/actions/toolbar/draw-line.svg</file>
-        <file alias="toolbar/draw-path.svg">Breeze/actions/toolbar/draw-path.svg</file>
-        <file alias="toolbar/draw-polygon.svg">Breeze/actions/toolbar/draw-polygon.svg</file>
-        <file alias="toolbar/draw-polyline.svg">Breeze/actions/toolbar/draw-polyline.svg</file>
-        <file alias="toolbar/draw-rectangle.svg">Breeze/actions/toolbar/draw-rectangle.svg</file>
-        <file alias="toolbar/draw-spiral.svg">Breeze/actions/toolbar/draw-spiral.svg</file>
-        <file alias="toolbar/draw-square-inverted-corners.svg">Breeze/actions/toolbar/draw-square-inverted-corners.svg</file>
-        <file alias="toolbar/draw-star.svg">Breeze/actions/toolbar/draw-star.svg</file>
-        <file alias="toolbar/draw-text.svg">Breeze/actions/toolbar/draw-text.svg</file>
-        <file alias="toolbar/draw-triangle.svg">Breeze/actions/toolbar/draw-triangle.svg</file>
-        <file alias="toolbar/draw-triangle1.svg">Breeze/actions/toolbar/draw-triangle1.svg</file>
-        <file alias="toolbar/draw-triangle2.svg">Breeze/actions/toolbar/draw-triangle2.svg</file>
-        <file alias="toolbar/draw-triangle3.svg">Breeze/actions/toolbar/draw-triangle3.svg</file>
-        <file alias="toolbar/draw-triangle4.svg">Breeze/actions/toolbar/draw-triangle4.svg</file>
-        <file alias="toolbar/draw-watercolor.svg">Breeze/actions/toolbar/draw-watercolor.svg</file>
-        <file alias="toolbar/edit-bomb.svg">Breeze/actions/toolbar/edit-bomb.svg</file>
-        <file alias="toolbar/edit-clear-history.svg">Breeze/actions/toolbar/edit-clear-history.svg</file>
-        <file alias="toolbar/edit-clear-list.svg">Breeze/actions/toolbar/edit-clear-list.svg</file>
-        <file alias="toolbar/edit-clear-locationbar-ltr.svg">Breeze/actions/toolbar/edit-clear-locationbar-ltr.svg</file>
-        <file alias="toolbar/edit-clear-locationbar-rtl.svg">Breeze/actions/toolbar/edit-clear-locationbar-rtl.svg</file>
-        <file alias="toolbar/edit-clear.svg">Breeze/actions/toolbar/edit-clear.svg</file>
-        <file alias="toolbar/edit-copy.svg">Breeze/actions/toolbar/edit-copy.svg</file>
-        <file alias="toolbar/edit-cut.svg">Breeze/actions/toolbar/edit-cut.svg</file>
-        <file alias="toolbar/edit-delete-shred.svg">Breeze/actions/toolbar/edit-delete-shred.svg</file>
-        <file alias="toolbar/edit-delete.svg">Breeze/actions/toolbar/edit-delete.svg</file>
-        <file alias="toolbar/edit-find-mail.svg">Breeze/actions/toolbar/edit-find-mail.svg</file>
-        <file alias="toolbar/edit-find-project.svg">Breeze/actions/toolbar/edit-find-project.svg</file>
-        <file alias="toolbar/edit-find-replace.svg">Breeze/actions/toolbar/edit-find-replace.svg</file>
-        <file alias="toolbar/edit-find-user.svg">Breeze/actions/toolbar/edit-find-user.svg</file>
-        <file alias="toolbar/edit-find.svg">Breeze/actions/toolbar/edit-find.svg</file>
-        <file alias="toolbar/edit-guides.svg">Breeze/actions/toolbar/edit-guides.svg</file>
-        <file alias="toolbar/edit-image-face-add.svg">Breeze/actions/toolbar/edit-image-face-add.svg</file>
-        <file alias="toolbar/edit-image-face-detect.svg">Breeze/actions/toolbar/edit-image-face-detect.svg</file>
-        <file alias="toolbar/edit-image-face-recognize.svg">Breeze/actions/toolbar/edit-image-face-recognize.svg</file>
-        <file alias="toolbar/edit-image-face-show.svg">Breeze/actions/toolbar/edit-image-face-show.svg</file>
-        <file alias="toolbar/edit-link.svg">Breeze/actions/toolbar/edit-link.svg</file>
-        <file alias="toolbar/edit-node.svg">Breeze/actions/toolbar/edit-node.svg</file>
-        <file alias="toolbar/edit-paste.svg">Breeze/actions/toolbar/edit-paste.svg</file>
-        <file alias="toolbar/edit-redo.svg">Breeze/actions/toolbar/edit-redo.svg</file>
-        <file alias="toolbar/edit-rename.svg">Breeze/actions/toolbar/edit-rename.svg</file>
-        <file alias="toolbar/edit-select-all.svg">Breeze/actions/toolbar/edit-select-all.svg</file>
-        <file alias="toolbar/edit-select-lasso.svg">Breeze/actions/toolbar/edit-select-lasso.svg</file>
-        <file alias="toolbar/edit-select.svg">Breeze/actions/toolbar/edit-select.svg</file>
-        <file alias="toolbar/edit-table-cell-merge.svg">Breeze/actions/toolbar/edit-table-cell-merge.svg</file>
-        <file alias="toolbar/edit-table-cell-split.svg">Breeze/actions/toolbar/edit-table-cell-split.svg</file>
-        <file alias="toolbar/edit-table-delete-column.svg">Breeze/actions/toolbar/edit-table-delete-column.svg</file>
-        <file alias="toolbar/edit-table-delete-row.svg">Breeze/actions/toolbar/edit-table-delete-row.svg</file>
-        <file alias="toolbar/edit-table-insert-column-left.svg">Breeze/actions/toolbar/edit-table-insert-column-left.svg</file>
-        <file alias="toolbar/edit-table-insert-column-right.svg">Breeze/actions/toolbar/edit-table-insert-column-right.svg</file>
-        <file alias="toolbar/edit-table-insert-row-above.svg">Breeze/actions/toolbar/edit-table-insert-row-above.svg</file>
-        <file alias="toolbar/edit-table-insert-row-below.svg">Breeze/actions/toolbar/edit-table-insert-row-below.svg</file>
-        <file alias="toolbar/edit-text-frame-update.svg">Breeze/actions/toolbar/edit-text-frame-update.svg</file>
-        <file alias="toolbar/edit-undo.svg">Breeze/actions/toolbar/edit-undo.svg</file>
-        <file alias="toolbar/feed-subscribe.svg">Breeze/actions/toolbar/feed-subscribe.svg</file>
-        <file alias="toolbar/file-zoom-in.svg">Breeze/actions/toolbar/file-zoom-in.svg</file>
-        <file alias="toolbar/file-zoom-out.svg">Breeze/actions/toolbar/file-zoom-out.svg</file>
-        <file alias="toolbar/fileview-preview.svg">Breeze/actions/toolbar/fileview-preview.svg</file>
-        <file alias="toolbar/fill-color.svg">Breeze/actions/toolbar/fill-color.svg</file>
-        <file alias="toolbar/flag-black.svg">Breeze/actions/toolbar/flag-black.svg</file>
-        <file alias="toolbar/flag-blue.svg">Breeze/actions/toolbar/flag-blue.svg</file>
-        <file alias="toolbar/flag-green.svg">Breeze/actions/toolbar/flag-green.svg</file>
-        <file alias="toolbar/flag-red.svg">Breeze/actions/toolbar/flag-red.svg</file>
-        <file alias="toolbar/flag-yellow.svg">Breeze/actions/toolbar/flag-yellow.svg</file>
-        <file alias="toolbar/flag.svg">Breeze/actions/toolbar/flag.svg</file>
-        <file alias="toolbar/folder-new.svg">Breeze/actions/toolbar/folder-new.svg</file>
-        <file alias="toolbar/folder-sync.svg">Breeze/actions/toolbar/folder-sync.svg</file>
-        <file alias="toolbar/fork.svg">Breeze/actions/toolbar/fork.svg</file>
-        <file alias="toolbar/format-add-node.svg">Breeze/actions/toolbar/format-add-node.svg</file>
-        <file alias="toolbar/format-break-node.svg">Breeze/actions/toolbar/format-break-node.svg</file>
-        <file alias="toolbar/format-connect-node.svg">Breeze/actions/toolbar/format-connect-node.svg</file>
-        <file alias="toolbar/format-disconnect-node.svg">Breeze/actions/toolbar/format-disconnect-node.svg</file>
-        <file alias="toolbar/format-fill-color.svg">Breeze/actions/toolbar/format-fill-color.svg</file>
-        <file alias="toolbar/format-font-size-less.svg">Breeze/actions/toolbar/format-font-size-less.svg</file>
-        <file alias="toolbar/format-font-size-more.svg">Breeze/actions/toolbar/format-font-size-more.svg</file>
-        <file alias="toolbar/format-indent-less.svg">Breeze/actions/toolbar/format-indent-less.svg</file>
-        <file alias="toolbar/format-indent-more.svg">Breeze/actions/toolbar/format-indent-more.svg</file>
-        <file alias="toolbar/format-join-node.svg">Breeze/actions/toolbar/format-join-node.svg</file>
-        <file alias="toolbar/format-justify-center.svg">Breeze/actions/toolbar/format-justify-center.svg</file>
-        <file alias="toolbar/format-justify-fill.svg">Breeze/actions/toolbar/format-justify-fill.svg</file>
-        <file alias="toolbar/format-justify-left.svg">Breeze/actions/toolbar/format-justify-left.svg</file>
-        <file alias="toolbar/format-justify-right.svg">Breeze/actions/toolbar/format-justify-right.svg</file>
-        <file alias="toolbar/format-line-spacing-double.svg">Breeze/actions/toolbar/format-line-spacing-double.svg</file>
-        <file alias="toolbar/format-line-spacing-normal.svg">Breeze/actions/toolbar/format-line-spacing-normal.svg</file>
-        <file alias="toolbar/format-line-spacing-triple.svg">Breeze/actions/toolbar/format-line-spacing-triple.svg</file>
-        <file alias="toolbar/format-list-ordered.svg">Breeze/actions/toolbar/format-list-ordered.svg</file>
-        <file alias="toolbar/format-list-unordered.svg">Breeze/actions/toolbar/format-list-unordered.svg</file>
-        <file alias="toolbar/format-remove-node.svg">Breeze/actions/toolbar/format-remove-node.svg</file>
-        <file alias="toolbar/format-stroke-color.svg">Breeze/actions/toolbar/format-stroke-color.svg</file>
-        <file alias="toolbar/format-text-bold.svg">Breeze/actions/toolbar/format-text-bold.svg</file>
-        <file alias="toolbar/format-text-color.svg">Breeze/actions/toolbar/format-text-color.svg</file>
-        <file alias="toolbar/format-text-direction-ltr.svg">Breeze/actions/toolbar/format-text-direction-ltr.svg</file>
-        <file alias="toolbar/format-text-direction-rtl.svg">Breeze/actions/toolbar/format-text-direction-rtl.svg</file>
-        <file alias="toolbar/format-text-italic.svg">Breeze/actions/toolbar/format-text-italic.svg</file>
-        <file alias="toolbar/format-text-strikethrough.svg">Breeze/actions/toolbar/format-text-strikethrough.svg</file>
-        <file alias="toolbar/format-text-subscript.svg">Breeze/actions/toolbar/format-text-subscript.svg</file>
-        <file alias="toolbar/format-text-superscript.svg">Breeze/actions/toolbar/format-text-superscript.svg</file>
-        <file alias="toolbar/format-text-symbol.svg">Breeze/actions/toolbar/format-text-symbol.svg</file>
-        <file alias="toolbar/format-text-underline.svg">Breeze/actions/toolbar/format-text-underline.svg</file>
-        <file alias="toolbar/formula.svg">Breeze/actions/toolbar/formula.svg</file>
-        <file alias="toolbar/games-achievements.svg">Breeze/actions/toolbar/games-achievements.svg</file>
-        <file alias="toolbar/games-config-background.svg">Breeze/actions/toolbar/games-config-background.svg</file>
-        <file alias="toolbar/games-config-board.svg">Breeze/actions/toolbar/games-config-board.svg</file>
-        <file alias="toolbar/games-config-custom.svg">Breeze/actions/toolbar/games-config-custom.svg</file>
-        <file alias="toolbar/games-config-options.svg">Breeze/actions/toolbar/games-config-options.svg</file>
-        <file alias="toolbar/games-config-theme.svg">Breeze/actions/toolbar/games-config-theme.svg</file>
-        <file alias="toolbar/games-config-tiles.svg">Breeze/actions/toolbar/games-config-tiles.svg</file>
-        <file alias="toolbar/games-difficult.svg">Breeze/actions/toolbar/games-difficult.svg</file>
-        <file alias="toolbar/games-endturn.svg">Breeze/actions/toolbar/games-endturn.svg</file>
-        <file alias="toolbar/games-highscores.svg">Breeze/actions/toolbar/games-highscores.svg</file>
-        <file alias="toolbar/games-hint.svg">Breeze/actions/toolbar/games-hint.svg</file>
-        <file alias="toolbar/games-solve.svg">Breeze/actions/toolbar/games-solve.svg</file>
-        <file alias="toolbar/get-hot-new-stuff.svg">Breeze/actions/toolbar/get-hot-new-stuff.svg</file>
-        <file alias="toolbar/go-bottom.svg">Breeze/actions/toolbar/go-bottom.svg</file>
-        <file alias="toolbar/go-down-search.svg">Breeze/actions/toolbar/go-down-search.svg</file>
-        <file alias="toolbar/go-down.svg">Breeze/actions/toolbar/go-down.svg</file>
-        <file alias="toolbar/go-first-view-page.svg">Breeze/actions/toolbar/go-first-view-page.svg</file>
-        <file alias="toolbar/go-first-view.svg">Breeze/actions/toolbar/go-first-view.svg</file>
-        <file alias="toolbar/go-first.svg">Breeze/actions/toolbar/go-first.svg</file>
-        <file alias="toolbar/go-home.svg">Breeze/actions/toolbar/go-home.svg</file>
-        <file alias="toolbar/go-jump-declaration.svg">Breeze/actions/toolbar/go-jump-declaration.svg</file>
-        <file alias="toolbar/go-jump-definition.svg">Breeze/actions/toolbar/go-jump-definition.svg</file>
-        <file alias="toolbar/go-jump-locationbar.svg">Breeze/actions/toolbar/go-jump-locationbar.svg</file>
-        <file alias="toolbar/go-jump-today.svg">Breeze/actions/toolbar/go-jump-today.svg</file>
-        <file alias="toolbar/go-jump.svg">Breeze/actions/toolbar/go-jump.svg</file>
-        <file alias="toolbar/go-last-view-page.svg">Breeze/actions/toolbar/go-last-view-page.svg</file>
-        <file alias="toolbar/go-last-view.svg">Breeze/actions/toolbar/go-last-view.svg</file>
-        <file alias="toolbar/go-last.svg">Breeze/actions/toolbar/go-last.svg</file>
-        <file alias="toolbar/go-next-context.svg">Breeze/actions/toolbar/go-next-context.svg</file>
-        <file alias="toolbar/go-next-use.svg">Breeze/actions/toolbar/go-next-use.svg</file>
-        <file alias="toolbar/go-next-view-page.svg">Breeze/actions/toolbar/go-next-view-page.svg</file>
-        <file alias="toolbar/go-next-view.svg">Breeze/actions/toolbar/go-next-view.svg</file>
-        <file alias="toolbar/go-next.svg">Breeze/actions/toolbar/go-next.svg</file>
-        <file alias="toolbar/go-previous-context.svg">Breeze/actions/toolbar/go-previous-context.svg</file>
-        <file alias="toolbar/go-previous-use.svg">Breeze/actions/toolbar/go-previous-use.svg</file>
-        <file alias="toolbar/go-previous-view-page.svg">Breeze/actions/toolbar/go-previous-view-page.svg</file>
-        <file alias="toolbar/go-previous-view.svg">Breeze/actions/toolbar/go-previous-view.svg</file>
-        <file alias="toolbar/go-previous.svg">Breeze/actions/toolbar/go-previous.svg</file>
-        <file alias="toolbar/go-top.svg">Breeze/actions/toolbar/go-top.svg</file>
-        <file alias="toolbar/go-up-search.svg">Breeze/actions/toolbar/go-up-search.svg</file>
-        <file alias="toolbar/go-up.svg">Breeze/actions/toolbar/go-up.svg</file>
-        <file alias="toolbar/help-about.svg">Breeze/actions/toolbar/help-about.svg</file>
-        <file alias="toolbar/help-contents.svg">Breeze/actions/toolbar/help-contents.svg</file>
-        <file alias="toolbar/help-contextual.svg">Breeze/actions/toolbar/help-contextual.svg</file>
-        <file alias="toolbar/help-donate.svg">Breeze/actions/toolbar/help-donate.svg</file>
-        <file alias="toolbar/help-feedback.svg">Breeze/actions/toolbar/help-feedback.svg</file>
-        <file alias="toolbar/help-hint.svg">Breeze/actions/toolbar/help-hint.svg</file>
-        <file alias="toolbar/identity.svg">Breeze/actions/toolbar/identity.svg</file>
-        <file alias="toolbar/im-aim.svg">Breeze/actions/toolbar/im-aim.svg</file>
-        <file alias="toolbar/im-ban-kick-user.svg">Breeze/actions/toolbar/im-ban-kick-user.svg</file>
-        <file alias="toolbar/im-ban-user.svg">Breeze/actions/toolbar/im-ban-user.svg</file>
-        <file alias="toolbar/im-facebook.svg">Breeze/actions/toolbar/im-facebook.svg</file>
-        <file alias="toolbar/im-gadugadu.svg">Breeze/actions/toolbar/im-gadugadu.svg</file>
-        <file alias="toolbar/im-google-talk.svg">Breeze/actions/toolbar/im-google-talk.svg</file>
-        <file alias="toolbar/im-google.svg">Breeze/actions/toolbar/im-google.svg</file>
-        <file alias="toolbar/im-icq.svg">Breeze/actions/toolbar/im-icq.svg</file>
-        <file alias="toolbar/im-identi.ca.svg">Breeze/actions/toolbar/im-identi.ca.svg</file>
-        <file alias="toolbar/im-invisible-user.svg">Breeze/actions/toolbar/im-invisible-user.svg</file>
-        <file alias="toolbar/im-jabber.svg">Breeze/actions/toolbar/im-jabber.svg</file>
-        <file alias="toolbar/im-kick-user.svg">Breeze/actions/toolbar/im-kick-user.svg</file>
-        <file alias="toolbar/im-msn.svg">Breeze/actions/toolbar/im-msn.svg</file>
-        <file alias="toolbar/im-qq.svg">Breeze/actions/toolbar/im-qq.svg</file>
-        <file alias="toolbar/im-skype.svg">Breeze/actions/toolbar/im-skype.svg</file>
-        <file alias="toolbar/im-twitter.svg">Breeze/actions/toolbar/im-twitter.svg</file>
-        <file alias="toolbar/im-user-away.svg">Breeze/actions/toolbar/im-user-away.svg</file>
-        <file alias="toolbar/im-user-busy.svg">Breeze/actions/toolbar/im-user-busy.svg</file>
-        <file alias="toolbar/im-user-offline.svg">Breeze/actions/toolbar/im-user-offline.svg</file>
-        <file alias="toolbar/im-user.svg">Breeze/actions/toolbar/im-user.svg</file>
-        <file alias="toolbar/im-yahoo.svg">Breeze/actions/toolbar/im-yahoo.svg</file>
-        <file alias="toolbar/insert-horizontal-rule.svg">Breeze/actions/toolbar/insert-horizontal-rule.svg</file>
-        <file alias="toolbar/insert-image.svg">Breeze/actions/toolbar/insert-image.svg</file>
-        <file alias="toolbar/insert-link.svg">Breeze/actions/toolbar/insert-link.svg</file>
-        <file alias="toolbar/insert-table.svg">Breeze/actions/toolbar/insert-table.svg</file>
-        <file alias="toolbar/insert-text.svg">Breeze/actions/toolbar/insert-text.svg</file>
-        <file alias="toolbar/irc-channel-active.svg">Breeze/actions/toolbar/irc-channel-active.svg</file>
-        <file alias="toolbar/irc-channel-inactive.svg">Breeze/actions/toolbar/irc-channel-inactive.svg</file>
-        <file alias="toolbar/irc-close-channel.svg">Breeze/actions/toolbar/irc-close-channel.svg</file>
-        <file alias="toolbar/irc-join-channel.svg">Breeze/actions/toolbar/irc-join-channel.svg</file>
-        <file alias="toolbar/irc-operator.svg">Breeze/actions/toolbar/irc-operator.svg</file>
-        <file alias="toolbar/irc-remove-operator.svg">Breeze/actions/toolbar/irc-remove-operator.svg</file>
-        <file alias="toolbar/irc-unvoice.svg">Breeze/actions/toolbar/irc-unvoice.svg</file>
-        <file alias="toolbar/irc-voice.svg">Breeze/actions/toolbar/irc-voice.svg</file>
-        <file alias="toolbar/journal-new.svg">Breeze/actions/toolbar/journal-new.svg</file>
-        <file alias="toolbar/key-enter.svg">Breeze/actions/toolbar/key-enter.svg</file>
-        <file alias="toolbar/layer-visible-off.svg">Breeze/actions/toolbar/layer-visible-off.svg</file>
-        <file alias="toolbar/layer-visible-on.svg">Breeze/actions/toolbar/layer-visible-on.svg</file>
-        <file alias="toolbar/list-add-font.svg">Breeze/actions/toolbar/list-add-font.svg</file>
-        <file alias="toolbar/list-add-user.svg">Breeze/actions/toolbar/list-add-user.svg</file>
-        <file alias="toolbar/list-add.svg">Breeze/actions/toolbar/list-add.svg</file>
-        <file alias="toolbar/list-remove-user.svg">Breeze/actions/toolbar/list-remove-user.svg</file>
-        <file alias="toolbar/list-remove.svg">Breeze/actions/toolbar/list-remove.svg</file>
-        <file alias="toolbar/list-resource-add.svg">Breeze/actions/toolbar/list-resource-add.svg</file>
-        <file alias="toolbar/mail-attachment.svg">Breeze/actions/toolbar/mail-attachment.svg</file>
-        <file alias="toolbar/mail-encrypted-full.svg">Breeze/actions/toolbar/mail-encrypted-full.svg</file>
-        <file alias="toolbar/mail-encrypted-part.svg">Breeze/actions/toolbar/mail-encrypted-part.svg</file>
-        <file alias="toolbar/mail-encrypted.svg">Breeze/actions/toolbar/mail-encrypted.svg</file>
-        <file alias="toolbar/mail-flag.svg">Breeze/actions/toolbar/mail-flag.svg</file>
-        <file alias="toolbar/mail-forward.svg">Breeze/actions/toolbar/mail-forward.svg</file>
-        <file alias="toolbar/mail-forwarded.svg">Breeze/actions/toolbar/mail-forwarded.svg</file>
-        <file alias="toolbar/mail-invitation.svg">Breeze/actions/toolbar/mail-invitation.svg</file>
-        <file alias="toolbar/mail-mark-important.svg">Breeze/actions/toolbar/mail-mark-important.svg</file>
-        <file alias="toolbar/mail-mark-junk.svg">Breeze/actions/toolbar/mail-mark-junk.svg</file>
-        <file alias="toolbar/mail-mark-notjunk.svg">Breeze/actions/toolbar/mail-mark-notjunk.svg</file>
-        <file alias="toolbar/mail-mark-read.svg">Breeze/actions/toolbar/mail-mark-read.svg</file>
-        <file alias="toolbar/mail-mark-task.svg">Breeze/actions/toolbar/mail-mark-task.svg</file>
-        <file alias="toolbar/mail-mark-unread-new.svg">Breeze/actions/toolbar/mail-mark-unread-new.svg</file>
-        <file alias="toolbar/mail-mark-unread.svg">Breeze/actions/toolbar/mail-mark-unread.svg</file>
-        <file alias="toolbar/mail-meeting-request-reply.svg">Breeze/actions/toolbar/mail-meeting-request-reply.svg</file>
-        <file alias="toolbar/mail-message-new-list.svg">Breeze/actions/toolbar/mail-message-new-list.svg</file>
-        <file alias="toolbar/mail-message-new.svg">Breeze/actions/toolbar/mail-message-new.svg</file>
-        <file alias="toolbar/mail-queue.svg">Breeze/actions/toolbar/mail-queue.svg</file>
-        <file alias="toolbar/mail-receive.svg">Breeze/actions/toolbar/mail-receive.svg</file>
-        <file alias="toolbar/mail-replied.svg">Breeze/actions/toolbar/mail-replied.svg</file>
-        <file alias="toolbar/mail-reply-all.svg">Breeze/actions/toolbar/mail-reply-all.svg</file>
-        <file alias="toolbar/mail-reply-custom-all.svg">Breeze/actions/toolbar/mail-reply-custom-all.svg</file>
-        <file alias="toolbar/mail-reply-custom.svg">Breeze/actions/toolbar/mail-reply-custom.svg</file>
-        <file alias="toolbar/mail-reply-list.svg">Breeze/actions/toolbar/mail-reply-list.svg</file>
-        <file alias="toolbar/mail-reply-sender.svg">Breeze/actions/toolbar/mail-reply-sender.svg</file>
-        <file alias="toolbar/mail-send.svg">Breeze/actions/toolbar/mail-send.svg</file>
-        <file alias="toolbar/mail-signature-unknown.svg">Breeze/actions/toolbar/mail-signature-unknown.svg</file>
-        <file alias="toolbar/mail-signed-full.svg">Breeze/actions/toolbar/mail-signed-full.svg</file>
-        <file alias="toolbar/mail-signed-part.svg">Breeze/actions/toolbar/mail-signed-part.svg</file>
-        <file alias="toolbar/mail-signed-verified.svg">Breeze/actions/toolbar/mail-signed-verified.svg</file>
-        <file alias="toolbar/mail-signed.svg">Breeze/actions/toolbar/mail-signed.svg</file>
-        <file alias="toolbar/mail-tagged.svg">Breeze/actions/toolbar/mail-tagged.svg</file>
-        <file alias="toolbar/measure.svg">Breeze/actions/toolbar/measure.svg</file>
-        <file alias="toolbar/media-eject.svg">Breeze/actions/toolbar/media-eject.svg</file>
-        <file alias="toolbar/media-playback-pause.svg">Breeze/actions/toolbar/media-playback-pause.svg</file>
-        <file alias="toolbar/media-playback-start.svg">Breeze/actions/toolbar/media-playback-start.svg</file>
-        <file alias="toolbar/media-playback-stop.svg">Breeze/actions/toolbar/media-playback-stop.svg</file>
-        <file alias="toolbar/media-record.svg">Breeze/actions/toolbar/media-record.svg</file>
-        <file alias="toolbar/media-seek-backward.svg">Breeze/actions/toolbar/media-seek-backward.svg</file>
-        <file alias="toolbar/media-seek-forward.svg">Breeze/actions/toolbar/media-seek-forward.svg</file>
-        <file alias="toolbar/media-skip-backward.svg">Breeze/actions/toolbar/media-skip-backward.svg</file>
-        <file alias="toolbar/media-skip-forward.svg">Breeze/actions/toolbar/media-skip-forward.svg</file>
-        <file alias="toolbar/meeting-attending-tentative.svg">Breeze/actions/toolbar/meeting-attending-tentative.svg</file>
-        <file alias="toolbar/meeting-attending.svg">Breeze/actions/toolbar/meeting-attending.svg</file>
-        <file alias="toolbar/meeting-participant-no-response.svg">Breeze/actions/toolbar/meeting-participant-no-response.svg</file>
-        <file alias="toolbar/meeting-participant-request-response.svg">Breeze/actions/toolbar/meeting-participant-request-response.svg</file>
-        <file alias="toolbar/merge.svg">Breeze/actions/toolbar/merge.svg</file>
-        <file alias="toolbar/messagebox_warning.svg">Breeze/actions/toolbar/messagebox_warning.svg</file>
-        <file alias="toolbar/milestone.svg">Breeze/actions/toolbar/milestone.svg</file>
-        <file alias="toolbar/network-connect.svg">Breeze/actions/toolbar/network-connect.svg</file>
-        <file alias="toolbar/network-disconnect.svg">Breeze/actions/toolbar/network-disconnect.svg</file>
-        <file alias="toolbar/news-subscribe.svg">Breeze/actions/toolbar/news-subscribe.svg</file>
-        <file alias="toolbar/news-unsubscribe.svg">Breeze/actions/toolbar/news-unsubscribe.svg</file>
-        <file alias="toolbar/object-flip-horizontal.svg">Breeze/actions/toolbar/object-flip-horizontal.svg</file>
-        <file alias="toolbar/object-flip-vertical.svg">Breeze/actions/toolbar/object-flip-vertical.svg</file>
-        <file alias="toolbar/object-group.svg">Breeze/actions/toolbar/object-group.svg</file>
-        <file alias="toolbar/object-locked.svg">Breeze/actions/toolbar/object-locked.svg</file>
-        <file alias="toolbar/object-order-back.svg">Breeze/actions/toolbar/object-order-back.svg</file>
-        <file alias="toolbar/object-order-front.svg">Breeze/actions/toolbar/object-order-front.svg</file>
-        <file alias="toolbar/object-order-lower.svg">Breeze/actions/toolbar/object-order-lower.svg</file>
-        <file alias="toolbar/object-order-raise.svg">Breeze/actions/toolbar/object-order-raise.svg</file>
-        <file alias="toolbar/object-rotate-left.svg">Breeze/actions/toolbar/object-rotate-left.svg</file>
-        <file alias="toolbar/object-rotate-right.svg">Breeze/actions/toolbar/object-rotate-right.svg</file>
-        <file alias="toolbar/object-ungroup.svg">Breeze/actions/toolbar/object-ungroup.svg</file>
-        <file alias="toolbar/object-unlocked.svg">Breeze/actions/toolbar/object-unlocked.svg</file>
-        <file alias="toolbar/office-chart-area-focus-peak-node.svg">Breeze/actions/toolbar/office-chart-area-focus-peak-node.svg</file>
-        <file alias="toolbar/office-chart-area-percentage.svg">Breeze/actions/toolbar/office-chart-area-percentage.svg</file>
-        <file alias="toolbar/office-chart-area-stacked.svg">Breeze/actions/toolbar/office-chart-area-stacked.svg</file>
-        <file alias="toolbar/office-chart-area.svg">Breeze/actions/toolbar/office-chart-area.svg</file>
-        <file alias="toolbar/office-chart-bar-percentage.svg">Breeze/actions/toolbar/office-chart-bar-percentage.svg</file>
-        <file alias="toolbar/office-chart-bar-stacked.svg">Breeze/actions/toolbar/office-chart-bar-stacked.svg</file>
-        <file alias="toolbar/office-chart-bar.svg">Breeze/actions/toolbar/office-chart-bar.svg</file>
-        <file alias="toolbar/office-chart-line-percentage.svg">Breeze/actions/toolbar/office-chart-line-percentage.svg</file>
-        <file alias="toolbar/office-chart-line-stacked.svg">Breeze/actions/toolbar/office-chart-line-stacked.svg</file>
-        <file alias="toolbar/office-chart-line.svg">Breeze/actions/toolbar/office-chart-line.svg</file>
-        <file alias="toolbar/office-chart-pie.svg">Breeze/actions/toolbar/office-chart-pie.svg</file>
-        <file alias="toolbar/office-chart-polar-stacked.svg">Breeze/actions/toolbar/office-chart-polar-stacked.svg</file>
-        <file alias="toolbar/office-chart-polar.svg">Breeze/actions/toolbar/office-chart-polar.svg</file>
-        <file alias="toolbar/office-chart-ring.svg">Breeze/actions/toolbar/office-chart-ring.svg</file>
-        <file alias="toolbar/office-chart-scatter.svg">Breeze/actions/toolbar/office-chart-scatter.svg</file>
-        <file alias="toolbar/page-2sides.svg">Breeze/actions/toolbar/page-2sides.svg</file>
-        <file alias="toolbar/page-3sides.svg">Breeze/actions/toolbar/page-3sides.svg</file>
-        <file alias="toolbar/page-4sides.svg">Breeze/actions/toolbar/page-4sides.svg</file>
-        <file alias="toolbar/page-simple.svg">Breeze/actions/toolbar/page-simple.svg</file>
-        <file alias="toolbar/page-zoom.svg">Breeze/actions/toolbar/page-zoom.svg</file>
-        <file alias="toolbar/player-time.svg">Breeze/actions/toolbar/player-time.svg</file>
-        <file alias="toolbar/player-volume-muted.svg">Breeze/actions/toolbar/player-volume-muted.svg</file>
-        <file alias="toolbar/player-volume.svg">Breeze/actions/toolbar/player-volume.svg</file>
-        <file alias="toolbar/preferences-activities.svg">Breeze/actions/toolbar/preferences-activities.svg</file>
-        <file alias="toolbar/preflight-verifier.svg">Breeze/actions/toolbar/preflight-verifier.svg</file>
-        <file alias="toolbar/process-stop.svg">Breeze/actions/toolbar/process-stop.svg</file>
-        <file alias="toolbar/project-development-close-all.svg">Breeze/actions/toolbar/project-development-close-all.svg</file>
-        <file alias="toolbar/project-development-close.svg">Breeze/actions/toolbar/project-development-close.svg</file>
-        <file alias="toolbar/project-development-new-template.svg">Breeze/actions/toolbar/project-development-new-template.svg</file>
-        <file alias="toolbar/project-development.svg">Breeze/actions/toolbar/project-development.svg</file>
-        <file alias="toolbar/project-open.svg">Breeze/actions/toolbar/project-open.svg</file>
-        <file alias="toolbar/quickopen-class.svg">Breeze/actions/toolbar/quickopen-class.svg</file>
-        <file alias="toolbar/quickopen-file.svg">Breeze/actions/toolbar/quickopen-file.svg</file>
-        <file alias="toolbar/quickopen-function.svg">Breeze/actions/toolbar/quickopen-function.svg</file>
-        <file alias="toolbar/quickopen.svg">Breeze/actions/toolbar/quickopen.svg</file>
-        <file alias="toolbar/rating.svg">Breeze/actions/toolbar/rating.svg</file>
-        <file alias="toolbar/resource-calendar-child-insert.svg">Breeze/actions/toolbar/resource-calendar-child-insert.svg</file>
-        <file alias="toolbar/resource-calendar-child.svg">Breeze/actions/toolbar/resource-calendar-child.svg</file>
-        <file alias="toolbar/resource-calendar-insert.svg">Breeze/actions/toolbar/resource-calendar-insert.svg</file>
-        <file alias="toolbar/resource-group-new.svg">Breeze/actions/toolbar/resource-group-new.svg</file>
-        <file alias="toolbar/resource-group.svg">Breeze/actions/toolbar/resource-group.svg</file>
-        <file alias="toolbar/roll.svg">Breeze/actions/toolbar/roll.svg</file>
-        <file alias="toolbar/run-build-clean.svg">Breeze/actions/toolbar/run-build-clean.svg</file>
-        <file alias="toolbar/run-build-configure.svg">Breeze/actions/toolbar/run-build-configure.svg</file>
-        <file alias="toolbar/run-build-file.svg">Breeze/actions/toolbar/run-build-file.svg</file>
-        <file alias="toolbar/run-build-install-root.svg">Breeze/actions/toolbar/run-build-install-root.svg</file>
-        <file alias="toolbar/run-build-install.svg">Breeze/actions/toolbar/run-build-install.svg</file>
-        <file alias="toolbar/run-build-prune.svg">Breeze/actions/toolbar/run-build-prune.svg</file>
-        <file alias="toolbar/run-build.svg">Breeze/actions/toolbar/run-build.svg</file>
-        <file alias="toolbar/select-rectangular.svg">Breeze/actions/toolbar/select-rectangular.svg</file>
-        <file alias="toolbar/services.svg">Breeze/actions/toolbar/services.svg</file>
-        <file alias="toolbar/shapes.svg">Breeze/actions/toolbar/shapes.svg</file>
-        <file alias="toolbar/shift-down-y.svg">Breeze/actions/toolbar/shift-down-y.svg</file>
-        <file alias="toolbar/shift-left-x.svg">Breeze/actions/toolbar/shift-left-x.svg</file>
-        <file alias="toolbar/shift-right-x.svg">Breeze/actions/toolbar/shift-right-x.svg</file>
-        <file alias="toolbar/shift-up-y.svg">Breeze/actions/toolbar/shift-up-y.svg</file>
-        <file alias="toolbar/show-menu.svg">Breeze/actions/toolbar/show-menu.svg</file>
-        <file alias="toolbar/show-offline.svg">Breeze/actions/toolbar/show-offline.svg</file>
-        <file alias="toolbar/snap-extension.svg">Breeze/actions/toolbar/snap-extension.svg</file>
-        <file alias="toolbar/snap-guideline.svg">Breeze/actions/toolbar/snap-guideline.svg</file>
-        <file alias="toolbar/snap-intersection.svg">Breeze/actions/toolbar/snap-intersection.svg</file>
-        <file alias="toolbar/snap-node.svg">Breeze/actions/toolbar/snap-node.svg</file>
-        <file alias="toolbar/snap-orthogonal.svg">Breeze/actions/toolbar/snap-orthogonal.svg</file>
-        <file alias="toolbar/sort-presence.svg">Breeze/actions/toolbar/sort-presence.svg</file>
-        <file alias="toolbar/speaker.svg">Breeze/actions/toolbar/speaker.svg</file>
-        <file alias="toolbar/split.svg">Breeze/actions/toolbar/split.svg</file>
-        <file alias="toolbar/story-editor.svg">Breeze/actions/toolbar/story-editor.svg</file>
-        <file alias="toolbar/stroke-cap-bevel.svg">Breeze/actions/toolbar/stroke-cap-bevel.svg</file>
-        <file alias="toolbar/stroke-cap-butt.svg">Breeze/actions/toolbar/stroke-cap-butt.svg</file>
-        <file alias="toolbar/stroke-cap-miter.svg">Breeze/actions/toolbar/stroke-cap-miter.svg</file>
-        <file alias="toolbar/stroke-cap-round.svg">Breeze/actions/toolbar/stroke-cap-round.svg</file>
-        <file alias="toolbar/stroke-cap-square.svg">Breeze/actions/toolbar/stroke-cap-square.svg</file>
-        <file alias="toolbar/stroke-join-bevel.svg">Breeze/actions/toolbar/stroke-join-bevel.svg</file>
-        <file alias="toolbar/stroke-join-miter.svg">Breeze/actions/toolbar/stroke-join-miter.svg</file>
-        <file alias="toolbar/stroke-join-round.svg">Breeze/actions/toolbar/stroke-join-round.svg</file>
-        <file alias="toolbar/svn-commit.svg">Breeze/actions/toolbar/svn-commit.svg</file>
-        <file alias="toolbar/svn-update.svg">Breeze/actions/toolbar/svn-update.svg</file>
-        <file alias="toolbar/system-lock-screen.svg">Breeze/actions/toolbar/system-lock-screen.svg</file>
-        <file alias="toolbar/system-log-out.svg">Breeze/actions/toolbar/system-log-out.svg</file>
-        <file alias="toolbar/system-reboot.svg">Breeze/actions/toolbar/system-reboot.svg</file>
-        <file alias="toolbar/system-run.svg">Breeze/actions/toolbar/system-run.svg</file>
-        <file alias="toolbar/system-search.svg">Breeze/actions/toolbar/system-search.svg</file>
-        <file alias="toolbar/system-shutdown.svg">Breeze/actions/toolbar/system-shutdown.svg</file>
-        <file alias="toolbar/system-suspend-hibernate.svg">Breeze/actions/toolbar/system-suspend-hibernate.svg</file>
-        <file alias="toolbar/system-suspend.svg">Breeze/actions/toolbar/system-suspend.svg</file>
-        <file alias="toolbar/system-switch-user.svg">Breeze/actions/toolbar/system-switch-user.svg</file>
-        <file alias="toolbar/tab-close-other.svg">Breeze/actions/toolbar/tab-close-other.svg</file>
-        <file alias="toolbar/tab-close.svg">Breeze/actions/toolbar/tab-close.svg</file>
-        <file alias="toolbar/tab-detach.svg">Breeze/actions/toolbar/tab-detach.svg</file>
-        <file alias="toolbar/tab-duplicate.svg">Breeze/actions/toolbar/tab-duplicate.svg</file>
-        <file alias="toolbar/tab-new-background.svg">Breeze/actions/toolbar/tab-new-background.svg</file>
-        <file alias="toolbar/tab-new.svg">Breeze/actions/toolbar/tab-new.svg</file>
-        <file alias="toolbar/table.svg">Breeze/actions/toolbar/table.svg</file>
-        <file alias="toolbar/tag.svg">Breeze/actions/toolbar/tag.svg</file>
-        <file alias="toolbar/task-new.svg">Breeze/actions/toolbar/task-new.svg</file>
-        <file alias="toolbar/taxes-finances.svg">Breeze/actions/toolbar/taxes-finances.svg</file>
-        <file alias="toolbar/TeX_logo.svg">Breeze/actions/toolbar/TeX_logo.svg</file>
-        <file alias="toolbar/text-field.svg">Breeze/actions/toolbar/text-field.svg</file>
-        <file alias="toolbar/text-frame-link.svg">Breeze/actions/toolbar/text-frame-link.svg</file>
-        <file alias="toolbar/text-frame-unlink.svg">Breeze/actions/toolbar/text-frame-unlink.svg</file>
-        <file alias="toolbar/text-speak.svg">Breeze/actions/toolbar/text-speak.svg</file>
-        <file alias="toolbar/tool-animator.svg">Breeze/actions/toolbar/tool-animator.svg</file>
-        <file alias="toolbar/tools-check-spelling.svg">Breeze/actions/toolbar/tools-check-spelling.svg</file>
-        <file alias="toolbar/tools-media-optical-burn-image.svg">Breeze/actions/toolbar/tools-media-optical-burn-image.svg</file>
-        <file alias="toolbar/tools-media-optical-burn.svg">Breeze/actions/toolbar/tools-media-optical-burn.svg</file>
-        <file alias="toolbar/tools-media-optical-copy.svg">Breeze/actions/toolbar/tools-media-optical-copy.svg</file>
-        <file alias="toolbar/tools-media-optical-erase.svg">Breeze/actions/toolbar/tools-media-optical-erase.svg</file>
-        <file alias="toolbar/tools-media-optical-format.svg">Breeze/actions/toolbar/tools-media-optical-format.svg</file>
-        <file alias="toolbar/tools-report-bug.svg">Breeze/actions/toolbar/tools-report-bug.svg</file>
-        <file alias="toolbar/tools-rip-audio-cd.svg">Breeze/actions/toolbar/tools-rip-audio-cd.svg</file>
-        <file alias="toolbar/tools-rip-video-cd.svg">Breeze/actions/toolbar/tools-rip-video-cd.svg</file>
-        <file alias="toolbar/tools-rip-video-dvd.svg">Breeze/actions/toolbar/tools-rip-video-dvd.svg</file>
-        <file alias="toolbar/tools-wizard.svg">Breeze/actions/toolbar/tools-wizard.svg</file>
-        <file alias="toolbar/transform-crop-and-resize.svg">Breeze/actions/toolbar/transform-crop-and-resize.svg</file>
-        <file alias="toolbar/transform-crop.svg">Breeze/actions/toolbar/transform-crop.svg</file>
-        <file alias="toolbar/transform-move.svg">Breeze/actions/toolbar/transform-move.svg</file>
-        <file alias="toolbar/transform-rotate.svg">Breeze/actions/toolbar/transform-rotate.svg</file>
-        <file alias="toolbar/transform-scale-textbox-points.svg">Breeze/actions/toolbar/transform-scale-textbox-points.svg</file>
-        <file alias="toolbar/transform-scale.svg">Breeze/actions/toolbar/transform-scale.svg</file>
-        <file alias="toolbar/transform-shear-down.svg">Breeze/actions/toolbar/transform-shear-down.svg</file>
-        <file alias="toolbar/transform-shear-left.svg">Breeze/actions/toolbar/transform-shear-left.svg</file>
-        <file alias="toolbar/transform-shear-right.svg">Breeze/actions/toolbar/transform-shear-right.svg</file>
-        <file alias="toolbar/transform-shear-up.svg">Breeze/actions/toolbar/transform-shear-up.svg</file>
-        <file alias="toolbar/trash-empty.svg">Breeze/actions/toolbar/trash-empty.svg</file>
-        <file alias="toolbar/user-group-delete.svg">Breeze/actions/toolbar/user-group-delete.svg</file>
-        <file alias="toolbar/user-group-new.svg">Breeze/actions/toolbar/user-group-new.svg</file>
-        <file alias="toolbar/user-group-properties.svg">Breeze/actions/toolbar/user-group-properties.svg</file>
-        <file alias="toolbar/user-identity.svg">Breeze/actions/toolbar/user-identity.svg</file>
-        <file alias="toolbar/user-properties.svg">Breeze/actions/toolbar/user-properties.svg</file>
-        <file alias="toolbar/view-bank-account-checking.svg">Breeze/actions/toolbar/view-bank-account-checking.svg</file>
-        <file alias="toolbar/view-bank-account-savings.svg">Breeze/actions/toolbar/view-bank-account-savings.svg</file>
-        <file alias="toolbar/view-bank-account.svg">Breeze/actions/toolbar/view-bank-account.svg</file>
-        <file alias="toolbar/view-bank.svg">Breeze/actions/toolbar/view-bank.svg</file>
-        <file alias="toolbar/view-barcode-add.svg">Breeze/actions/toolbar/view-barcode-add.svg</file>
-        <file alias="toolbar/view-barcode.svg">Breeze/actions/toolbar/view-barcode.svg</file>
-        <file alias="toolbar/view-calendar-agenda.svg">Breeze/actions/toolbar/view-calendar-agenda.svg</file>
-        <file alias="toolbar/view-calendar-birthday.svg">Breeze/actions/toolbar/view-calendar-birthday.svg</file>
-        <file alias="toolbar/view-calendar-day.svg">Breeze/actions/toolbar/view-calendar-day.svg</file>
-        <file alias="toolbar/view-calendar-holiday.svg">Breeze/actions/toolbar/view-calendar-holiday.svg</file>
-        <file alias="toolbar/view-calendar-journal.svg">Breeze/actions/toolbar/view-calendar-journal.svg</file>
-        <file alias="toolbar/view-calendar-list.svg">Breeze/actions/toolbar/view-calendar-list.svg</file>
-        <file alias="toolbar/view-calendar-month.svg">Breeze/actions/toolbar/view-calendar-month.svg</file>
-        <file alias="toolbar/view-calendar-special-occasion.svg">Breeze/actions/toolbar/view-calendar-special-occasion.svg</file>
-        <file alias="toolbar/view-calendar-tasks.svg">Breeze/actions/toolbar/view-calendar-tasks.svg</file>
-        <file alias="toolbar/view-calendar-time-spent.svg">Breeze/actions/toolbar/view-calendar-time-spent.svg</file>
-        <file alias="toolbar/view-calendar-timeline.svg">Breeze/actions/toolbar/view-calendar-timeline.svg</file>
-        <file alias="toolbar/view-calendar-upcoming-days.svg">Breeze/actions/toolbar/view-calendar-upcoming-days.svg</file>
-        <file alias="toolbar/view-calendar-upcoming-events.svg">Breeze/actions/toolbar/view-calendar-upcoming-events.svg</file>
-        <file alias="toolbar/view-calendar-wedding-anniversary.svg">Breeze/actions/toolbar/view-calendar-wedding-anniversary.svg</file>
-        <file alias="toolbar/view-calendar-week.svg">Breeze/actions/toolbar/view-calendar-week.svg</file>
-        <file alias="toolbar/view-calendar-whatsnext.svg">Breeze/actions/toolbar/view-calendar-whatsnext.svg</file>
-        <file alias="toolbar/view-calendar-workweek.svg">Breeze/actions/toolbar/view-calendar-workweek.svg</file>
-        <file alias="toolbar/view-calendar.svg">Breeze/actions/toolbar/view-calendar.svg</file>
-        <file alias="toolbar/view-catalog.svg">Breeze/actions/toolbar/view-catalog.svg</file>
-        <file alias="toolbar/view-categories.svg">Breeze/actions/toolbar/view-categories.svg</file>
-        <file alias="toolbar/view-close.svg">Breeze/actions/toolbar/view-close.svg</file>
-        <file alias="toolbar/view-filter.svg">Breeze/actions/toolbar/view-filter.svg</file>
-        <file alias="toolbar/view-fullscreen.svg">Breeze/actions/toolbar/view-fullscreen.svg</file>
-        <file alias="toolbar/view-grid.svg">Breeze/actions/toolbar/view-grid.svg</file>
-        <file alias="toolbar/view-group.svg">Breeze/actions/toolbar/view-group.svg</file>
-        <file alias="toolbar/view-history.svg">Breeze/actions/toolbar/view-history.svg</file>
-        <file alias="toolbar/view-left-close.svg">Breeze/actions/toolbar/view-left-close.svg</file>
-        <file alias="toolbar/view-list-details.svg">Breeze/actions/toolbar/view-list-details.svg</file>
-        <file alias="toolbar/view-list-icons.svg">Breeze/actions/toolbar/view-list-icons.svg</file>
-        <file alias="toolbar/view-list-text.svg">Breeze/actions/toolbar/view-list-text.svg</file>
-        <file alias="toolbar/view-list-tree.svg">Breeze/actions/toolbar/view-list-tree.svg</file>
-        <file alias="toolbar/view-media-playlist.svg">Breeze/actions/toolbar/view-media-playlist.svg</file>
-        <file alias="toolbar/view-pim-calendar.svg">Breeze/actions/toolbar/view-pim-calendar.svg</file>
-        <file alias="toolbar/view-pim-contacts.svg">Breeze/actions/toolbar/view-pim-contacts.svg</file>
-        <file alias="toolbar/view-presentation.svg">Breeze/actions/toolbar/view-presentation.svg</file>
-        <file alias="toolbar/view-preview.svg">Breeze/actions/toolbar/view-preview.svg</file>
-        <file alias="toolbar/view-refresh.svg">Breeze/actions/toolbar/view-refresh.svg</file>
-        <file alias="toolbar/view-restore.svg">Breeze/actions/toolbar/view-restore.svg</file>
-        <file alias="toolbar/view-right-close.svg">Breeze/actions/toolbar/view-right-close.svg</file>
-        <file alias="toolbar/view-right-new.svg">Breeze/actions/toolbar/view-right-new.svg</file>
-        <file alias="toolbar/view-sidetree.svg">Breeze/actions/toolbar/view-sidetree.svg</file>
-        <file alias="toolbar/view-sort-ascending.svg">Breeze/actions/toolbar/view-sort-ascending.svg</file>
-        <file alias="toolbar/view-sort-descending.svg">Breeze/actions/toolbar/view-sort-descending.svg</file>
-        <file alias="toolbar/view-split-left-right.svg">Breeze/actions/toolbar/view-split-left-right.svg</file>
-        <file alias="toolbar/view-split-top-bottom.svg">Breeze/actions/toolbar/view-split-top-bottom.svg</file>
-        <file alias="toolbar/view-statistics.svg">Breeze/actions/toolbar/view-statistics.svg</file>
-        <file alias="toolbar/view-web-browser-dom-tree.svg">Breeze/actions/toolbar/view-web-browser-dom-tree.svg</file>
-        <file alias="toolbar/window-close.svg">Breeze/actions/toolbar/window-close.svg</file>
-        <file alias="toolbar/window-duplicate.svg">Breeze/actions/toolbar/window-duplicate.svg</file>
-        <file alias="toolbar/window-new.svg">Breeze/actions/toolbar/window-new.svg</file>
-        <file alias="toolbar/x-zoom-in.svg">Breeze/actions/toolbar/x-zoom-in.svg</file>
-        <file alias="toolbar/x-zoom-out.svg">Breeze/actions/toolbar/x-zoom-out.svg</file>
-        <file alias="toolbar/xy-curve.svg">Breeze/actions/toolbar/xy-curve.svg</file>
-        <file alias="toolbar/xy-equation-curve.svg">Breeze/actions/toolbar/xy-equation-curve.svg</file>
-        <file alias="toolbar/xy-fit-curve.svg">Breeze/actions/toolbar/xy-fit-curve.svg</file>
-        <file alias="toolbar/y-zoom-in.svg">Breeze/actions/toolbar/y-zoom-in.svg</file>
-        <file alias="toolbar/y-zoom-out.svg">Breeze/actions/toolbar/y-zoom-out.svg</file>
-        <file alias="toolbar/zoom-1-to-2.svg">Breeze/actions/toolbar/zoom-1-to-2.svg</file>
-        <file alias="toolbar/zoom-2-to-1.svg">Breeze/actions/toolbar/zoom-2-to-1.svg</file>
-        <file alias="toolbar/zoom-draw.svg">Breeze/actions/toolbar/zoom-draw.svg</file>
-        <file alias="toolbar/zoom-fit-best.svg">Breeze/actions/toolbar/zoom-fit-best.svg</file>
-        <file alias="toolbar/zoom-fit-height.svg">Breeze/actions/toolbar/zoom-fit-height.svg</file>
-        <file alias="toolbar/zoom-fit-width.svg">Breeze/actions/toolbar/zoom-fit-width.svg</file>
-        <file alias="toolbar/zoom-in-x.svg">Breeze/actions/toolbar/zoom-in-x.svg</file>
-        <file alias="toolbar/zoom-in-y.svg">Breeze/actions/toolbar/zoom-in-y.svg</file>
-        <file alias="toolbar/zoom-in.svg">Breeze/actions/toolbar/zoom-in.svg</file>
-        <file alias="toolbar/zoom-next.svg">Breeze/actions/toolbar/zoom-next.svg</file>
-        <file alias="toolbar/zoom-original.svg">Breeze/actions/toolbar/zoom-original.svg</file>
-        <file alias="toolbar/zoom-out-x.svg">Breeze/actions/toolbar/zoom-out-x.svg</file>
-        <file alias="toolbar/zoom-out-y.svg">Breeze/actions/toolbar/zoom-out-y.svg</file>
-        <file alias="toolbar/zoom-out.svg">Breeze/actions/toolbar/zoom-out.svg</file>
-        <file alias="toolbar/zoom-previous.svg">Breeze/actions/toolbar/zoom-previous.svg</file>
-        <file alias="toolbar/zoom-select-x.svg">Breeze/actions/toolbar/zoom-select-x.svg</file>
-        <file alias="toolbar/zoom-select-y.svg">Breeze/actions/toolbar/zoom-select-y.svg</file>
-        <file alias="toolbar/zoom-select.svg">Breeze/actions/toolbar/zoom-select.svg</file>
+        <file>Breeze/actions/toolbar/acrobat.svg</file>
+        <file>Breeze/actions/toolbar/address-book-new.svg</file>
+        <file>Breeze/actions/toolbar/align-horizontal-bottom-out.svg</file>
+        <file>Breeze/actions/toolbar/align-horizontal-center.svg</file>
+        <file>Breeze/actions/toolbar/align-horizontal-left-out.svg</file>
+        <file>Breeze/actions/toolbar/align-horizontal-left.svg</file>
+        <file>Breeze/actions/toolbar/align-horizontal-right-out.svg</file>
+        <file>Breeze/actions/toolbar/align-horizontal-right.svg</file>
+        <file>Breeze/actions/toolbar/align-horizontal-top-out.svg</file>
+        <file>Breeze/actions/toolbar/align-vertical-bottom-out.svg</file>
+        <file>Breeze/actions/toolbar/align-vertical-bottom.svg</file>
+        <file>Breeze/actions/toolbar/align-vertical-center.svg</file>
+        <file>Breeze/actions/toolbar/align-vertical-top-out.svg</file>
+        <file>Breeze/actions/toolbar/align-vertical-top.svg</file>
+        <file>Breeze/actions/toolbar/application-exit.svg</file>
+        <file>Breeze/actions/toolbar/application-menu.svg</file>
+        <file>Breeze/actions/toolbar/appointment-new.svg</file>
+        <file>Breeze/actions/toolbar/archive-extract.svg</file>
+        <file>Breeze/actions/toolbar/archive-insert-directory.svg</file>
+        <file>Breeze/actions/toolbar/archive-insert.svg</file>
+        <file>Breeze/actions/toolbar/archive-remove.svg</file>
+        <file>Breeze/actions/toolbar/arrow-down-double.svg</file>
+        <file>Breeze/actions/toolbar/arrow-down.svg</file>
+        <file>Breeze/actions/toolbar/arrow-left-double.svg</file>
+        <file>Breeze/actions/toolbar/arrow-left.svg</file>
+        <file>Breeze/actions/toolbar/arrow-right-double.svg</file>
+        <file>Breeze/actions/toolbar/arrow-right.svg</file>
+        <file>Breeze/actions/toolbar/arrow-up-double.svg</file>
+        <file>Breeze/actions/toolbar/arrow-up.svg</file>
+        <file>Breeze/actions/toolbar/auto-scale-all.svg</file>
+        <file>Breeze/actions/toolbar/auto-scale-x.svg</file>
+        <file>Breeze/actions/toolbar/auto-scale-y.svg</file>
+        <file>Breeze/actions/toolbar/axis-horizontal.svg</file>
+        <file>Breeze/actions/toolbar/axis-vertical.svg</file>
+        <file>Breeze/actions/toolbar/bookmark-new-list.svg</file>
+        <file>Breeze/actions/toolbar/bookmark-new.svg</file>
+        <file>Breeze/actions/toolbar/bookmark-toolbar.svg</file>
+        <file>Breeze/actions/toolbar/bookmarks-organize.svg</file>
+        <file>Breeze/actions/toolbar/call-start.svg</file>
+        <file>Breeze/actions/toolbar/call-stop.svg</file>
+        <file>Breeze/actions/toolbar/cartesian-plot-four-axes.svg</file>
+        <file>Breeze/actions/toolbar/cartesian-plot-two-axes-centered-origin.svg</file>
+        <file>Breeze/actions/toolbar/cartesian-plot-two-axes-centered.svg</file>
+        <file>Breeze/actions/toolbar/cartesian-plot-two-axes.svg</file>
+        <file>Breeze/actions/toolbar/character-set.svg</file>
+        <file>Breeze/actions/toolbar/checkbox.svg</file>
+        <file>Breeze/actions/toolbar/chronometer-lap.svg</file>
+        <file>Breeze/actions/toolbar/chronometer-pause.svg</file>
+        <file>Breeze/actions/toolbar/chronometer-reset.svg</file>
+        <file>Breeze/actions/toolbar/chronometer-start.svg</file>
+        <file>Breeze/actions/toolbar/chronometer.svg</file>
+        <file>Breeze/actions/toolbar/code-block.svg</file>
+        <file>Breeze/actions/toolbar/code-class.svg</file>
+        <file>Breeze/actions/toolbar/code-context.svg</file>
+        <file>Breeze/actions/toolbar/code-function.svg</file>
+        <file>Breeze/actions/toolbar/code-typedef.svg</file>
+        <file>Breeze/actions/toolbar/code-variable.svg</file>
+        <file>Breeze/actions/toolbar/color-picker-black.svg</file>
+        <file>Breeze/actions/toolbar/color-picker-grey.svg</file>
+        <file>Breeze/actions/toolbar/color-picker-white.svg</file>
+        <file>Breeze/actions/toolbar/color-picker.svg</file>
+        <file>Breeze/actions/toolbar/configure-toolbars.svg</file>
+        <file>Breeze/actions/toolbar/configure.svg</file>
+        <file>Breeze/actions/toolbar/contact-new.svg</file>
+        <file>Breeze/actions/toolbar/cursor-arrow.svg</file>
+        <file>Breeze/actions/toolbar/dashboard-show.svg</file>
+        <file>Breeze/actions/toolbar/database-index.svg</file>
+        <file>Breeze/actions/toolbar/debug-execute-from-cursor.svg</file>
+        <file>Breeze/actions/toolbar/debug-execute-to-cursor.svg</file>
+        <file>Breeze/actions/toolbar/debug-run-cursor.svg</file>
+        <file>Breeze/actions/toolbar/debug-run.svg</file>
+        <file>Breeze/actions/toolbar/debug-step-instruction.svg</file>
+        <file>Breeze/actions/toolbar/debug-step-into-instruction.svg</file>
+        <file>Breeze/actions/toolbar/debug-step-into.svg</file>
+        <file>Breeze/actions/toolbar/debug-step-out.svg</file>
+        <file>Breeze/actions/toolbar/debug-step-over.svg</file>
+        <file>Breeze/actions/toolbar/dialog-cancel.svg</file>
+        <file>Breeze/actions/toolbar/dialog-close.svg</file>
+        <file>Breeze/actions/toolbar/dialog-ok-apply.svg</file>
+        <file>Breeze/actions/toolbar/dialog-ok.svg</file>
+        <file>Breeze/actions/toolbar/distribute-horizontal-center.svg</file>
+        <file>Breeze/actions/toolbar/distribute-horizontal-equal.svg</file>
+        <file>Breeze/actions/toolbar/distribute-horizontal-left.svg</file>
+        <file>Breeze/actions/toolbar/distribute-horizontal-margin.svg</file>
+        <file>Breeze/actions/toolbar/distribute-horizontal-page.svg</file>
+        <file>Breeze/actions/toolbar/distribute-horizontal-right.svg</file>
+        <file>Breeze/actions/toolbar/distribute-horizontal-x.svg</file>
+        <file>Breeze/actions/toolbar/distribute-vertical-bottom.svg</file>
+        <file>Breeze/actions/toolbar/distribute-vertical-center.svg</file>
+        <file>Breeze/actions/toolbar/distribute-vertical-equal.svg</file>
+        <file>Breeze/actions/toolbar/distribute-vertical-margin.svg</file>
+        <file>Breeze/actions/toolbar/distribute-vertical-page.svg</file>
+        <file>Breeze/actions/toolbar/distribute-vertical-top.svg</file>
+        <file>Breeze/actions/toolbar/distribute-vertical-y.svg</file>
+        <file>Breeze/actions/toolbar/document-close.svg</file>
+        <file>Breeze/actions/toolbar/document-decrypt.svg</file>
+        <file>Breeze/actions/toolbar/document-edit-decrypt-verify.svg</file>
+        <file>Breeze/actions/toolbar/document-edit-decrypt.svg</file>
+        <file>Breeze/actions/toolbar/document-edit-encrypt.svg</file>
+        <file>Breeze/actions/toolbar/document-edit-sign-encrypt.svg</file>
+        <file>Breeze/actions/toolbar/document-edit-sign.svg</file>
+        <file>Breeze/actions/toolbar/document-edit-verify.svg</file>
+        <file>Breeze/actions/toolbar/document-edit.svg</file>
+        <file>Breeze/actions/toolbar/document-encrypt.svg</file>
+        <file>Breeze/actions/toolbar/document-encrypted.svg</file>
+        <file>Breeze/actions/toolbar/document-export-table.svg</file>
+        <file>Breeze/actions/toolbar/document-export.svg</file>
+        <file>Breeze/actions/toolbar/document-import.svg</file>
+        <file>Breeze/actions/toolbar/document-new.svg</file>
+        <file>Breeze/actions/toolbar/document-open-folder.svg</file>
+        <file>Breeze/actions/toolbar/document-open-recent.svg</file>
+        <file>Breeze/actions/toolbar/document-open-remote.svg</file>
+        <file>Breeze/actions/toolbar/document-open.svg</file>
+        <file>Breeze/actions/toolbar/document-preview-archive.svg</file>
+        <file>Breeze/actions/toolbar/document-preview.svg</file>
+        <file>Breeze/actions/toolbar/document-print-direct.svg</file>
+        <file>Breeze/actions/toolbar/document-print-frame.svg</file>
+        <file>Breeze/actions/toolbar/document-print-preview.svg</file>
+        <file>Breeze/actions/toolbar/document-print.svg</file>
+        <file>Breeze/actions/toolbar/document-properties.svg</file>
+        <file>Breeze/actions/toolbar/document-revert.svg</file>
+        <file>Breeze/actions/toolbar/document-save-all.svg</file>
+        <file>Breeze/actions/toolbar/document-save-as.svg</file>
+        <file>Breeze/actions/toolbar/document-save.svg</file>
+        <file>Breeze/actions/toolbar/document-share.svg</file>
+        <file>Breeze/actions/toolbar/document-sign.svg</file>
+        <file>Breeze/actions/toolbar/documentation.svg</file>
+        <file>Breeze/actions/toolbar/documentinfo.svg</file>
+        <file>Breeze/actions/toolbar/download-later.svg</file>
+        <file>Breeze/actions/toolbar/download.svg</file>
+        <file>Breeze/actions/toolbar/draw-arrow-back.svg</file>
+        <file>Breeze/actions/toolbar/draw-arrow-down.svg</file>
+        <file>Breeze/actions/toolbar/draw-arrow-forward.svg</file>
+        <file>Breeze/actions/toolbar/draw-arrow-up.svg</file>
+        <file>Breeze/actions/toolbar/draw-bezier-curves.svg</file>
+        <file>Breeze/actions/toolbar/draw-brush.svg</file>
+        <file>Breeze/actions/toolbar/draw-circle.svg</file>
+        <file>Breeze/actions/toolbar/draw-cross.svg</file>
+        <file>Breeze/actions/toolbar/draw-donut.svg</file>
+        <file>Breeze/actions/toolbar/draw-ellipse.svg</file>
+        <file>Breeze/actions/toolbar/draw-eraser.svg</file>
+        <file>Breeze/actions/toolbar/draw-freehand.svg</file>
+        <file>Breeze/actions/toolbar/draw-halfcircle1.svg</file>
+        <file>Breeze/actions/toolbar/draw-halfcircle2.svg</file>
+        <file>Breeze/actions/toolbar/draw-halfcircle3.svg</file>
+        <file>Breeze/actions/toolbar/draw-halfcircle4.svg</file>
+        <file>Breeze/actions/toolbar/draw-line.svg</file>
+        <file>Breeze/actions/toolbar/draw-path.svg</file>
+        <file>Breeze/actions/toolbar/draw-polygon.svg</file>
+        <file>Breeze/actions/toolbar/draw-polyline.svg</file>
+        <file>Breeze/actions/toolbar/draw-rectangle.svg</file>
+        <file>Breeze/actions/toolbar/draw-spiral.svg</file>
+        <file>Breeze/actions/toolbar/draw-square-inverted-corners.svg</file>
+        <file>Breeze/actions/toolbar/draw-star.svg</file>
+        <file>Breeze/actions/toolbar/draw-text.svg</file>
+        <file>Breeze/actions/toolbar/draw-triangle.svg</file>
+        <file>Breeze/actions/toolbar/draw-triangle1.svg</file>
+        <file>Breeze/actions/toolbar/draw-triangle2.svg</file>
+        <file>Breeze/actions/toolbar/draw-triangle3.svg</file>
+        <file>Breeze/actions/toolbar/draw-triangle4.svg</file>
+        <file>Breeze/actions/toolbar/draw-watercolor.svg</file>
+        <file>Breeze/actions/toolbar/edit-bomb.svg</file>
+        <file>Breeze/actions/toolbar/edit-clear-history.svg</file>
+        <file>Breeze/actions/toolbar/edit-clear-list.svg</file>
+        <file>Breeze/actions/toolbar/edit-clear-locationbar-ltr.svg</file>
+        <file>Breeze/actions/toolbar/edit-clear-locationbar-rtl.svg</file>
+        <file>Breeze/actions/toolbar/edit-clear.svg</file>
+        <file>Breeze/actions/toolbar/edit-copy.svg</file>
+        <file>Breeze/actions/toolbar/edit-cut.svg</file>
+        <file>Breeze/actions/toolbar/edit-delete-shred.svg</file>
+        <file>Breeze/actions/toolbar/edit-delete.svg</file>
+        <file>Breeze/actions/toolbar/edit-find-mail.svg</file>
+        <file>Breeze/actions/toolbar/edit-find-project.svg</file>
+        <file>Breeze/actions/toolbar/edit-find-replace.svg</file>
+        <file>Breeze/actions/toolbar/edit-find-user.svg</file>
+        <file>Breeze/actions/toolbar/edit-find.svg</file>
+        <file>Breeze/actions/toolbar/edit-guides.svg</file>
+        <file>Breeze/actions/toolbar/edit-image-face-add.svg</file>
+        <file>Breeze/actions/toolbar/edit-image-face-detect.svg</file>
+        <file>Breeze/actions/toolbar/edit-image-face-recognize.svg</file>
+        <file>Breeze/actions/toolbar/edit-image-face-show.svg</file>
+        <file>Breeze/actions/toolbar/edit-node.svg</file>
+        <file>Breeze/actions/toolbar/edit-paste.svg</file>
+        <file>Breeze/actions/toolbar/edit-redo.svg</file>
+        <file>Breeze/actions/toolbar/edit-rename.svg</file>
+        <file>Breeze/actions/toolbar/edit-select-all.svg</file>
+        <file>Breeze/actions/toolbar/edit-select-lasso.svg</file>
+        <file>Breeze/actions/toolbar/edit-select.svg</file>
+        <file>Breeze/actions/toolbar/edit-table-cell-merge.svg</file>
+        <file>Breeze/actions/toolbar/edit-table-cell-split.svg</file>
+        <file>Breeze/actions/toolbar/edit-table-delete-column.svg</file>
+        <file>Breeze/actions/toolbar/edit-table-delete-row.svg</file>
+        <file>Breeze/actions/toolbar/edit-table-insert-column-left.svg</file>
+        <file>Breeze/actions/toolbar/edit-table-insert-column-right.svg</file>
+        <file>Breeze/actions/toolbar/edit-table-insert-row-above.svg</file>
+        <file>Breeze/actions/toolbar/edit-table-insert-row-below.svg</file>
+        <file>Breeze/actions/toolbar/edit-text-frame-update.svg</file>
+        <file>Breeze/actions/toolbar/edit-undo.svg</file>
+        <file>Breeze/actions/toolbar/feed-subscribe.svg</file>
+        <file>Breeze/actions/toolbar/file-zoom-in.svg</file>
+        <file>Breeze/actions/toolbar/file-zoom-out.svg</file>
+        <file>Breeze/actions/toolbar/fileview-preview.svg</file>
+        <file>Breeze/actions/toolbar/fill-color.svg</file>
+        <file>Breeze/actions/toolbar/flag-black.svg</file>
+        <file>Breeze/actions/toolbar/flag-blue.svg</file>
+        <file>Breeze/actions/toolbar/flag-green.svg</file>
+        <file>Breeze/actions/toolbar/flag-red.svg</file>
+        <file>Breeze/actions/toolbar/flag-yellow.svg</file>
+        <file>Breeze/actions/toolbar/flag.svg</file>
+        <file>Breeze/actions/toolbar/folder-new.svg</file>
+        <file>Breeze/actions/toolbar/folder-sync.svg</file>
+        <file>Breeze/actions/toolbar/fork.svg</file>
+        <file>Breeze/actions/toolbar/format-add-node.svg</file>
+        <file>Breeze/actions/toolbar/format-break-node.svg</file>
+        <file>Breeze/actions/toolbar/format-connect-node.svg</file>
+        <file>Breeze/actions/toolbar/format-disconnect-node.svg</file>
+        <file>Breeze/actions/toolbar/format-fill-color.svg</file>
+        <file>Breeze/actions/toolbar/format-font-size-less.svg</file>
+        <file>Breeze/actions/toolbar/format-font-size-more.svg</file>
+        <file>Breeze/actions/toolbar/format-indent-less.svg</file>
+        <file>Breeze/actions/toolbar/format-indent-more.svg</file>
+        <file>Breeze/actions/toolbar/format-join-node.svg</file>
+        <file>Breeze/actions/toolbar/format-justify-center.svg</file>
+        <file>Breeze/actions/toolbar/format-justify-fill.svg</file>
+        <file>Breeze/actions/toolbar/format-justify-left.svg</file>
+        <file>Breeze/actions/toolbar/format-justify-right.svg</file>
+        <file>Breeze/actions/toolbar/format-line-spacing-double.svg</file>
+        <file>Breeze/actions/toolbar/format-line-spacing-normal.svg</file>
+        <file>Breeze/actions/toolbar/format-line-spacing-triple.svg</file>
+        <file>Breeze/actions/toolbar/format-list-ordered.svg</file>
+        <file>Breeze/actions/toolbar/format-list-unordered.svg</file>
+        <file>Breeze/actions/toolbar/format-remove-node.svg</file>
+        <file>Breeze/actions/toolbar/format-stroke-color.svg</file>
+        <file>Breeze/actions/toolbar/format-text-bold.svg</file>
+        <file>Breeze/actions/toolbar/format-text-color.svg</file>
+        <file>Breeze/actions/toolbar/format-text-direction-ltr.svg</file>
+        <file>Breeze/actions/toolbar/format-text-direction-rtl.svg</file>
+        <file>Breeze/actions/toolbar/format-text-italic.svg</file>
+        <file>Breeze/actions/toolbar/format-text-strikethrough.svg</file>
+        <file>Breeze/actions/toolbar/format-text-subscript.svg</file>
+        <file>Breeze/actions/toolbar/format-text-superscript.svg</file>
+        <file>Breeze/actions/toolbar/format-text-symbol.svg</file>
+        <file>Breeze/actions/toolbar/format-text-underline.svg</file>
+        <file>Breeze/actions/toolbar/formula.svg</file>
+        <file>Breeze/actions/toolbar/games-achievements.svg</file>
+        <file>Breeze/actions/toolbar/games-config-background.svg</file>
+        <file>Breeze/actions/toolbar/games-config-board.svg</file>
+        <file>Breeze/actions/toolbar/games-config-custom.svg</file>
+        <file>Breeze/actions/toolbar/games-config-theme.svg</file>
+        <file>Breeze/actions/toolbar/games-config-tiles.svg</file>
+        <file>Breeze/actions/toolbar/games-difficult.svg</file>
+        <file>Breeze/actions/toolbar/games-endturn.svg</file>
+        <file>Breeze/actions/toolbar/games-highscores.svg</file>
+        <file>Breeze/actions/toolbar/games-hint.svg</file>
+        <file>Breeze/actions/toolbar/games-solve.svg</file>
+        <file>Breeze/actions/toolbar/get-hot-new-stuff.svg</file>
+        <file>Breeze/actions/toolbar/go-bottom.svg</file>
+        <file>Breeze/actions/toolbar/go-down-search.svg</file>
+        <file>Breeze/actions/toolbar/go-down.svg</file>
+        <file>Breeze/actions/toolbar/go-first-view-page.svg</file>
+        <file>Breeze/actions/toolbar/go-first-view.svg</file>
+        <file>Breeze/actions/toolbar/go-first.svg</file>
+        <file>Breeze/actions/toolbar/go-home.svg</file>
+        <file>Breeze/actions/toolbar/go-jump-declaration.svg</file>
+        <file>Breeze/actions/toolbar/go-jump-definition.svg</file>
+        <file>Breeze/actions/toolbar/go-jump-locationbar.svg</file>
+        <file>Breeze/actions/toolbar/go-jump-today.svg</file>
+        <file>Breeze/actions/toolbar/go-jump.svg</file>
+        <file>Breeze/actions/toolbar/go-last-view-page.svg</file>
+        <file>Breeze/actions/toolbar/go-last-view.svg</file>
+        <file>Breeze/actions/toolbar/go-last.svg</file>
+        <file>Breeze/actions/toolbar/go-next-context.svg</file>
+        <file>Breeze/actions/toolbar/go-next-use.svg</file>
+        <file>Breeze/actions/toolbar/go-next-view-page.svg</file>
+        <file>Breeze/actions/toolbar/go-next-view.svg</file>
+        <file>Breeze/actions/toolbar/go-next.svg</file>
+        <file>Breeze/actions/toolbar/go-previous-context.svg</file>
+        <file>Breeze/actions/toolbar/go-previous-use.svg</file>
+        <file>Breeze/actions/toolbar/go-previous-view-page.svg</file>
+        <file>Breeze/actions/toolbar/go-previous-view.svg</file>
+        <file>Breeze/actions/toolbar/go-previous.svg</file>
+        <file>Breeze/actions/toolbar/go-top.svg</file>
+        <file>Breeze/actions/toolbar/go-up-search.svg</file>
+        <file>Breeze/actions/toolbar/go-up.svg</file>
+        <file>Breeze/actions/toolbar/help-about.svg</file>
+        <file>Breeze/actions/toolbar/help-contextual.svg</file>
+        <file>Breeze/actions/toolbar/help-donate.svg</file>
+        <file>Breeze/actions/toolbar/help-feedback.svg</file>
+        <file>Breeze/actions/toolbar/help-hint.svg</file>
+        <file>Breeze/actions/toolbar/identity.svg</file>
+        <file>Breeze/actions/toolbar/im-aim.svg</file>
+        <file>Breeze/actions/toolbar/im-ban-kick-user.svg</file>
+        <file>Breeze/actions/toolbar/im-ban-user.svg</file>
+        <file>Breeze/actions/toolbar/im-facebook.svg</file>
+        <file>Breeze/actions/toolbar/im-gadugadu.svg</file>
+        <file>Breeze/actions/toolbar/im-google-talk.svg</file>
+        <file>Breeze/actions/toolbar/im-google.svg</file>
+        <file>Breeze/actions/toolbar/im-icq.svg</file>
+        <file>Breeze/actions/toolbar/im-identi.ca.svg</file>
+        <file>Breeze/actions/toolbar/im-invisible-user.svg</file>
+        <file>Breeze/actions/toolbar/im-jabber.svg</file>
+        <file>Breeze/actions/toolbar/im-kick-user.svg</file>
+        <file>Breeze/actions/toolbar/im-msn.svg</file>
+        <file>Breeze/actions/toolbar/im-qq.svg</file>
+        <file>Breeze/actions/toolbar/im-skype.svg</file>
+        <file>Breeze/actions/toolbar/im-twitter.svg</file>
+        <file>Breeze/actions/toolbar/im-user-away.svg</file>
+        <file>Breeze/actions/toolbar/im-user-busy.svg</file>
+        <file>Breeze/actions/toolbar/im-user-offline.svg</file>
+        <file>Breeze/actions/toolbar/im-user.svg</file>
+        <file>Breeze/actions/toolbar/im-yahoo.svg</file>
+        <file>Breeze/actions/toolbar/insert-horizontal-rule.svg</file>
+        <file>Breeze/actions/toolbar/insert-image.svg</file>
+        <file>Breeze/actions/toolbar/insert-link.svg</file>
+        <file>Breeze/actions/toolbar/insert-table.svg</file>
+        <file>Breeze/actions/toolbar/insert-text.svg</file>
+        <file>Breeze/actions/toolbar/irc-channel-active.svg</file>
+        <file>Breeze/actions/toolbar/irc-channel-inactive.svg</file>
+        <file>Breeze/actions/toolbar/irc-close-channel.svg</file>
+        <file>Breeze/actions/toolbar/irc-join-channel.svg</file>
+        <file>Breeze/actions/toolbar/irc-operator.svg</file>
+        <file>Breeze/actions/toolbar/irc-remove-operator.svg</file>
+        <file>Breeze/actions/toolbar/irc-unvoice.svg</file>
+        <file>Breeze/actions/toolbar/irc-voice.svg</file>
+        <file>Breeze/actions/toolbar/journal-new.svg</file>
+        <file>Breeze/actions/toolbar/key-enter.svg</file>
+        <file>Breeze/actions/toolbar/layer-visible-off.svg</file>
+        <file>Breeze/actions/toolbar/layer-visible-on.svg</file>
+        <file>Breeze/actions/toolbar/list-add-font.svg</file>
+        <file>Breeze/actions/toolbar/list-add-user.svg</file>
+        <file>Breeze/actions/toolbar/list-add.svg</file>
+        <file>Breeze/actions/toolbar/list-remove-user.svg</file>
+        <file>Breeze/actions/toolbar/list-remove.svg</file>
+        <file>Breeze/actions/toolbar/list-resource-add.svg</file>
+        <file>Breeze/actions/toolbar/mail-attachment.svg</file>
+        <file>Breeze/actions/toolbar/mail-encrypted-full.svg</file>
+        <file>Breeze/actions/toolbar/mail-encrypted-part.svg</file>
+        <file>Breeze/actions/toolbar/mail-encrypted.svg</file>
+        <file>Breeze/actions/toolbar/mail-flag.svg</file>
+        <file>Breeze/actions/toolbar/mail-forward.svg</file>
+        <file>Breeze/actions/toolbar/mail-forwarded.svg</file>
+        <file>Breeze/actions/toolbar/mail-invitation.svg</file>
+        <file>Breeze/actions/toolbar/mail-mark-important.svg</file>
+        <file>Breeze/actions/toolbar/mail-mark-junk.svg</file>
+        <file>Breeze/actions/toolbar/mail-mark-notjunk.svg</file>
+        <file>Breeze/actions/toolbar/mail-mark-read.svg</file>
+        <file>Breeze/actions/toolbar/mail-mark-task.svg</file>
+        <file>Breeze/actions/toolbar/mail-mark-unread-new.svg</file>
+        <file>Breeze/actions/toolbar/mail-mark-unread.svg</file>
+        <file>Breeze/actions/toolbar/mail-meeting-request-reply.svg</file>
+        <file>Breeze/actions/toolbar/mail-message-new-list.svg</file>
+        <file>Breeze/actions/toolbar/mail-message-new.svg</file>
+        <file>Breeze/actions/toolbar/mail-queue.svg</file>
+        <file>Breeze/actions/toolbar/mail-receive.svg</file>
+        <file>Breeze/actions/toolbar/mail-replied.svg</file>
+        <file>Breeze/actions/toolbar/mail-reply-all.svg</file>
+        <file>Breeze/actions/toolbar/mail-reply-custom-all.svg</file>
+        <file>Breeze/actions/toolbar/mail-reply-custom.svg</file>
+        <file>Breeze/actions/toolbar/mail-reply-list.svg</file>
+        <file>Breeze/actions/toolbar/mail-reply-sender.svg</file>
+        <file>Breeze/actions/toolbar/mail-send.svg</file>
+        <file>Breeze/actions/toolbar/mail-signature-unknown.svg</file>
+        <file>Breeze/actions/toolbar/mail-signed-full.svg</file>
+        <file>Breeze/actions/toolbar/mail-signed-part.svg</file>
+        <file>Breeze/actions/toolbar/mail-signed-verified.svg</file>
+        <file>Breeze/actions/toolbar/mail-signed.svg</file>
+        <file>Breeze/actions/toolbar/mail-tagged.svg</file>
+        <file>Breeze/actions/toolbar/measure.svg</file>
+        <file>Breeze/actions/toolbar/media-eject.svg</file>
+        <file>Breeze/actions/toolbar/media-playback-pause.svg</file>
+        <file>Breeze/actions/toolbar/media-playback-start.svg</file>
+        <file>Breeze/actions/toolbar/media-playback-stop.svg</file>
+        <file>Breeze/actions/toolbar/media-record.svg</file>
+        <file>Breeze/actions/toolbar/media-seek-backward.svg</file>
+        <file>Breeze/actions/toolbar/media-seek-forward.svg</file>
+        <file>Breeze/actions/toolbar/media-skip-backward.svg</file>
+        <file>Breeze/actions/toolbar/media-skip-forward.svg</file>
+        <file>Breeze/actions/toolbar/meeting-attending-tentative.svg</file>
+        <file>Breeze/actions/toolbar/meeting-attending.svg</file>
+        <file>Breeze/actions/toolbar/meeting-participant-no-response.svg</file>
+        <file>Breeze/actions/toolbar/meeting-participant-request-response.svg</file>
+        <file>Breeze/actions/toolbar/merge.svg</file>
+        <file>Breeze/actions/toolbar/messagebox_warning.svg</file>
+        <file>Breeze/actions/toolbar/milestone.svg</file>
+        <file>Breeze/actions/toolbar/network-connect.svg</file>
+        <file>Breeze/actions/toolbar/network-disconnect.svg</file>
+        <file>Breeze/actions/toolbar/news-subscribe.svg</file>
+        <file>Breeze/actions/toolbar/news-unsubscribe.svg</file>
+        <file>Breeze/actions/toolbar/object-flip-horizontal.svg</file>
+        <file>Breeze/actions/toolbar/object-flip-vertical.svg</file>
+        <file>Breeze/actions/toolbar/object-group.svg</file>
+        <file>Breeze/actions/toolbar/object-locked.svg</file>
+        <file>Breeze/actions/toolbar/object-order-back.svg</file>
+        <file>Breeze/actions/toolbar/object-order-front.svg</file>
+        <file>Breeze/actions/toolbar/object-order-lower.svg</file>
+        <file>Breeze/actions/toolbar/object-order-raise.svg</file>
+        <file>Breeze/actions/toolbar/object-rotate-left.svg</file>
+        <file>Breeze/actions/toolbar/object-rotate-right.svg</file>
+        <file>Breeze/actions/toolbar/object-ungroup.svg</file>
+        <file>Breeze/actions/toolbar/object-unlocked.svg</file>
+        <file>Breeze/actions/toolbar/office-chart-area-focus-peak-node.svg</file>
+        <file>Breeze/actions/toolbar/office-chart-area-percentage.svg</file>
+        <file>Breeze/actions/toolbar/office-chart-area-stacked.svg</file>
+        <file>Breeze/actions/toolbar/office-chart-area.svg</file>
+        <file>Breeze/actions/toolbar/office-chart-bar-percentage.svg</file>
+        <file>Breeze/actions/toolbar/office-chart-bar-stacked.svg</file>
+        <file>Breeze/actions/toolbar/office-chart-bar.svg</file>
+        <file>Breeze/actions/toolbar/office-chart-line-percentage.svg</file>
+        <file>Breeze/actions/toolbar/office-chart-line-stacked.svg</file>
+        <file>Breeze/actions/toolbar/office-chart-line.svg</file>
+        <file>Breeze/actions/toolbar/office-chart-pie.svg</file>
+        <file>Breeze/actions/toolbar/office-chart-polar-stacked.svg</file>
+        <file>Breeze/actions/toolbar/office-chart-polar.svg</file>
+        <file>Breeze/actions/toolbar/office-chart-ring.svg</file>
+        <file>Breeze/actions/toolbar/office-chart-scatter.svg</file>
+        <file>Breeze/actions/toolbar/page-2sides.svg</file>
+        <file>Breeze/actions/toolbar/page-3sides.svg</file>
+        <file>Breeze/actions/toolbar/page-4sides.svg</file>
+        <file>Breeze/actions/toolbar/page-simple.svg</file>
+        <file>Breeze/actions/toolbar/page-zoom.svg</file>
+        <file>Breeze/actions/toolbar/player-time.svg</file>
+        <file>Breeze/actions/toolbar/player-volume-muted.svg</file>
+        <file>Breeze/actions/toolbar/player-volume.svg</file>
+        <file>Breeze/actions/toolbar/preferences-activities.svg</file>
+        <file>Breeze/actions/toolbar/preflight-verifier.svg</file>
+        <file>Breeze/actions/toolbar/process-stop.svg</file>
+        <file>Breeze/actions/toolbar/project-development-close-all.svg</file>
+        <file>Breeze/actions/toolbar/project-development-close.svg</file>
+        <file>Breeze/actions/toolbar/project-development-new-template.svg</file>
+        <file>Breeze/actions/toolbar/project-development.svg</file>
+        <file>Breeze/actions/toolbar/project-open.svg</file>
+        <file>Breeze/actions/toolbar/quickopen-class.svg</file>
+        <file>Breeze/actions/toolbar/quickopen-file.svg</file>
+        <file>Breeze/actions/toolbar/quickopen-function.svg</file>
+        <file>Breeze/actions/toolbar/quickopen.svg</file>
+        <file>Breeze/actions/toolbar/rating.svg</file>
+        <file>Breeze/actions/toolbar/resource-calendar-child-insert.svg</file>
+        <file>Breeze/actions/toolbar/resource-calendar-child.svg</file>
+        <file>Breeze/actions/toolbar/resource-calendar-insert.svg</file>
+        <file>Breeze/actions/toolbar/resource-group-new.svg</file>
+        <file>Breeze/actions/toolbar/resource-group.svg</file>
+        <file>Breeze/actions/toolbar/roll.svg</file>
+        <file>Breeze/actions/toolbar/run-build-clean.svg</file>
+        <file>Breeze/actions/toolbar/run-build-configure.svg</file>
+        <file>Breeze/actions/toolbar/run-build-file.svg</file>
+        <file>Breeze/actions/toolbar/run-build-install-root.svg</file>
+        <file>Breeze/actions/toolbar/run-build-install.svg</file>
+        <file>Breeze/actions/toolbar/run-build-prune.svg</file>
+        <file>Breeze/actions/toolbar/run-build.svg</file>
+        <file>Breeze/actions/toolbar/select-rectangular.svg</file>
+        <file>Breeze/actions/toolbar/services.svg</file>
+        <file>Breeze/actions/toolbar/shapes.svg</file>
+        <file>Breeze/actions/toolbar/shift-down-y.svg</file>
+        <file>Breeze/actions/toolbar/shift-left-x.svg</file>
+        <file>Breeze/actions/toolbar/shift-right-x.svg</file>
+        <file>Breeze/actions/toolbar/shift-up-y.svg</file>
+        <file>Breeze/actions/toolbar/show-menu.svg</file>
+        <file>Breeze/actions/toolbar/show-offline.svg</file>
+        <file>Breeze/actions/toolbar/snap-extension.svg</file>
+        <file>Breeze/actions/toolbar/snap-guideline.svg</file>
+        <file>Breeze/actions/toolbar/snap-intersection.svg</file>
+        <file>Breeze/actions/toolbar/snap-node.svg</file>
+        <file>Breeze/actions/toolbar/snap-orthogonal.svg</file>
+        <file>Breeze/actions/toolbar/sort-presence.svg</file>
+        <file>Breeze/actions/toolbar/speaker.svg</file>
+        <file>Breeze/actions/toolbar/split.svg</file>
+        <file>Breeze/actions/toolbar/story-editor.svg</file>
+        <file>Breeze/actions/toolbar/stroke-cap-bevel.svg</file>
+        <file>Breeze/actions/toolbar/stroke-cap-butt.svg</file>
+        <file>Breeze/actions/toolbar/stroke-cap-miter.svg</file>
+        <file>Breeze/actions/toolbar/stroke-cap-round.svg</file>
+        <file>Breeze/actions/toolbar/stroke-cap-square.svg</file>
+        <file>Breeze/actions/toolbar/stroke-join-bevel.svg</file>
+        <file>Breeze/actions/toolbar/stroke-join-miter.svg</file>
+        <file>Breeze/actions/toolbar/stroke-join-round.svg</file>
+        <file>Breeze/actions/toolbar/svn-commit.svg</file>
+        <file>Breeze/actions/toolbar/svn-update.svg</file>
+        <file>Breeze/actions/toolbar/system-lock-screen.svg</file>
+        <file>Breeze/actions/toolbar/system-log-out.svg</file>
+        <file>Breeze/actions/toolbar/system-reboot.svg</file>
+        <file>Breeze/actions/toolbar/system-run.svg</file>
+        <file>Breeze/actions/toolbar/system-search.svg</file>
+        <file>Breeze/actions/toolbar/system-shutdown.svg</file>
+        <file>Breeze/actions/toolbar/system-suspend-hibernate.svg</file>
+        <file>Breeze/actions/toolbar/system-suspend.svg</file>
+        <file>Breeze/actions/toolbar/system-switch-user.svg</file>
+        <file>Breeze/actions/toolbar/tab-close-other.svg</file>
+        <file>Breeze/actions/toolbar/tab-close.svg</file>
+        <file>Breeze/actions/toolbar/tab-detach.svg</file>
+        <file>Breeze/actions/toolbar/tab-duplicate.svg</file>
+        <file>Breeze/actions/toolbar/tab-new-background.svg</file>
+        <file>Breeze/actions/toolbar/tab-new.svg</file>
+        <file>Breeze/actions/toolbar/table.svg</file>
+        <file>Breeze/actions/toolbar/tag.svg</file>
+        <file>Breeze/actions/toolbar/task-new.svg</file>
+        <file>Breeze/actions/toolbar/taxes-finances.svg</file>
+        <file>Breeze/actions/toolbar/TeX_logo.svg</file>
+        <file>Breeze/actions/toolbar/text-field.svg</file>
+        <file>Breeze/actions/toolbar/text-frame-link.svg</file>
+        <file>Breeze/actions/toolbar/text-frame-unlink.svg</file>
+        <file>Breeze/actions/toolbar/text-speak.svg</file>
+        <file>Breeze/actions/toolbar/tool-animator.svg</file>
+        <file>Breeze/actions/toolbar/tools-check-spelling.svg</file>
+        <file>Breeze/actions/toolbar/tools-media-optical-burn-image.svg</file>
+        <file>Breeze/actions/toolbar/tools-media-optical-burn.svg</file>
+        <file>Breeze/actions/toolbar/tools-media-optical-copy.svg</file>
+        <file>Breeze/actions/toolbar/tools-media-optical-erase.svg</file>
+        <file>Breeze/actions/toolbar/tools-media-optical-format.svg</file>
+        <file>Breeze/actions/toolbar/tools-report-bug.svg</file>
+        <file>Breeze/actions/toolbar/tools-rip-audio-cd.svg</file>
+        <file>Breeze/actions/toolbar/tools-rip-video-cd.svg</file>
+        <file>Breeze/actions/toolbar/tools-rip-video-dvd.svg</file>
+        <file>Breeze/actions/toolbar/tools-wizard.svg</file>
+        <file>Breeze/actions/toolbar/transform-crop-and-resize.svg</file>
+        <file>Breeze/actions/toolbar/transform-crop.svg</file>
+        <file>Breeze/actions/toolbar/transform-move.svg</file>
+        <file>Breeze/actions/toolbar/transform-rotate.svg</file>
+        <file>Breeze/actions/toolbar/transform-scale-textbox-points.svg</file>
+        <file>Breeze/actions/toolbar/transform-scale.svg</file>
+        <file>Breeze/actions/toolbar/transform-shear-down.svg</file>
+        <file>Breeze/actions/toolbar/transform-shear-left.svg</file>
+        <file>Breeze/actions/toolbar/transform-shear-right.svg</file>
+        <file>Breeze/actions/toolbar/transform-shear-up.svg</file>
+        <file>Breeze/actions/toolbar/trash-empty.svg</file>
+        <file>Breeze/actions/toolbar/user-group-delete.svg</file>
+        <file>Breeze/actions/toolbar/user-group-new.svg</file>
+        <file>Breeze/actions/toolbar/user-group-properties.svg</file>
+        <file>Breeze/actions/toolbar/user-identity.svg</file>
+        <file>Breeze/actions/toolbar/user-properties.svg</file>
+        <file>Breeze/actions/toolbar/view-bank-account-checking.svg</file>
+        <file>Breeze/actions/toolbar/view-bank-account-savings.svg</file>
+        <file>Breeze/actions/toolbar/view-bank-account.svg</file>
+        <file>Breeze/actions/toolbar/view-bank.svg</file>
+        <file>Breeze/actions/toolbar/view-barcode-add.svg</file>
+        <file>Breeze/actions/toolbar/view-barcode.svg</file>
+        <file>Breeze/actions/toolbar/view-calendar-agenda.svg</file>
+        <file>Breeze/actions/toolbar/view-calendar-birthday.svg</file>
+        <file>Breeze/actions/toolbar/view-calendar-day.svg</file>
+        <file>Breeze/actions/toolbar/view-calendar-holiday.svg</file>
+        <file>Breeze/actions/toolbar/view-calendar-journal.svg</file>
+        <file>Breeze/actions/toolbar/view-calendar-list.svg</file>
+        <file>Breeze/actions/toolbar/view-calendar-month.svg</file>
+        <file>Breeze/actions/toolbar/view-calendar-special-occasion.svg</file>
+        <file>Breeze/actions/toolbar/view-calendar-tasks.svg</file>
+        <file>Breeze/actions/toolbar/view-calendar-time-spent.svg</file>
+        <file>Breeze/actions/toolbar/view-calendar-timeline.svg</file>
+        <file>Breeze/actions/toolbar/view-calendar-upcoming-days.svg</file>
+        <file>Breeze/actions/toolbar/view-calendar-upcoming-events.svg</file>
+        <file>Breeze/actions/toolbar/view-calendar-wedding-anniversary.svg</file>
+        <file>Breeze/actions/toolbar/view-calendar-week.svg</file>
+        <file>Breeze/actions/toolbar/view-calendar-whatsnext.svg</file>
+        <file>Breeze/actions/toolbar/view-calendar-workweek.svg</file>
+        <file>Breeze/actions/toolbar/view-calendar.svg</file>
+        <file>Breeze/actions/toolbar/view-catalog.svg</file>
+        <file>Breeze/actions/toolbar/view-categories.svg</file>
+        <file>Breeze/actions/toolbar/view-close.svg</file>
+        <file>Breeze/actions/toolbar/view-filter.svg</file>
+        <file>Breeze/actions/toolbar/view-fullscreen.svg</file>
+        <file>Breeze/actions/toolbar/view-grid.svg</file>
+        <file>Breeze/actions/toolbar/view-group.svg</file>
+        <file>Breeze/actions/toolbar/view-history.svg</file>
+        <file>Breeze/actions/toolbar/view-left-close.svg</file>
+        <file>Breeze/actions/toolbar/view-list-details.svg</file>
+        <file>Breeze/actions/toolbar/view-list-icons.svg</file>
+        <file>Breeze/actions/toolbar/view-list-text.svg</file>
+        <file>Breeze/actions/toolbar/view-list-tree.svg</file>
+        <file>Breeze/actions/toolbar/view-media-playlist.svg</file>
+        <file>Breeze/actions/toolbar/view-pim-calendar.svg</file>
+        <file>Breeze/actions/toolbar/view-pim-contacts.svg</file>
+        <file>Breeze/actions/toolbar/view-presentation.svg</file>
+        <file>Breeze/actions/toolbar/view-preview.svg</file>
+        <file>Breeze/actions/toolbar/view-refresh.svg</file>
+        <file>Breeze/actions/toolbar/view-restore.svg</file>
+        <file>Breeze/actions/toolbar/view-right-close.svg</file>
+        <file>Breeze/actions/toolbar/view-right-new.svg</file>
+        <file>Breeze/actions/toolbar/view-sidetree.svg</file>
+        <file>Breeze/actions/toolbar/view-sort-ascending.svg</file>
+        <file>Breeze/actions/toolbar/view-sort-descending.svg</file>
+        <file>Breeze/actions/toolbar/view-split-left-right.svg</file>
+        <file>Breeze/actions/toolbar/view-split-top-bottom.svg</file>
+        <file>Breeze/actions/toolbar/view-statistics.svg</file>
+        <file>Breeze/actions/toolbar/view-web-browser-dom-tree.svg</file>
+        <file>Breeze/actions/toolbar/window-close.svg</file>
+        <file>Breeze/actions/toolbar/window-duplicate.svg</file>
+        <file>Breeze/actions/toolbar/window-new.svg</file>
+        <file>Breeze/actions/toolbar/x-zoom-in.svg</file>
+        <file>Breeze/actions/toolbar/x-zoom-out.svg</file>
+        <file>Breeze/actions/toolbar/xy-curve.svg</file>
+        <file>Breeze/actions/toolbar/xy-equation-curve.svg</file>
+        <file>Breeze/actions/toolbar/xy-fit-curve.svg</file>
+        <file>Breeze/actions/toolbar/y-zoom-in.svg</file>
+        <file>Breeze/actions/toolbar/y-zoom-out.svg</file>
+        <file>Breeze/actions/toolbar/zoom-1-to-2.svg</file>
+        <file>Breeze/actions/toolbar/zoom-2-to-1.svg</file>
+        <file>Breeze/actions/toolbar/zoom-draw.svg</file>
+        <file>Breeze/actions/toolbar/zoom-fit-best.svg</file>
+        <file>Breeze/actions/toolbar/zoom-fit-height.svg</file>
+        <file>Breeze/actions/toolbar/zoom-fit-width.svg</file>
+        <file>Breeze/actions/toolbar/zoom-in-x.svg</file>
+        <file>Breeze/actions/toolbar/zoom-in-y.svg</file>
+        <file>Breeze/actions/toolbar/zoom-in.svg</file>
+        <file>Breeze/actions/toolbar/zoom-next.svg</file>
+        <file>Breeze/actions/toolbar/zoom-original.svg</file>
+        <file>Breeze/actions/toolbar/zoom-out-x.svg</file>
+        <file>Breeze/actions/toolbar/zoom-out-y.svg</file>
+        <file>Breeze/actions/toolbar/zoom-out.svg</file>
+        <file>Breeze/actions/toolbar/zoom-previous.svg</file>
+        <file>Breeze/actions/toolbar/zoom-select-x.svg</file>
+        <file>Breeze/actions/toolbar/zoom-select-y.svg</file>
+        <file>Breeze/actions/toolbar/zoom-select.svg</file>
     </qresource>
 </RCC>

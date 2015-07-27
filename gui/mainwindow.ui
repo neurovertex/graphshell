@@ -16,11 +16,7 @@
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
-     <widget class="QTabWidget" name="tabWidget">
-      <property name="currentIndex">
-       <number>-1</number>
-      </property>
-     </widget>
+     <widget class="QGraphicsView" name="graphicsView"/>
     </item>
    </layout>
   </widget>
@@ -38,6 +34,8 @@
      <string>Fi&amp;le</string>
     </property>
     <addaction name="actionNew_Graph"/>
+    <addaction name="actionStart"/>
+    <addaction name="actionS_top"/>
    </widget>
    <addaction name="menuFile"/>
   </widget>
@@ -49,15 +47,35 @@
     <bool>false</bool>
    </attribute>
    <addaction name="actionNew_Graph"/>
+   <addaction name="actionStart"/>
+   <addaction name="actionS_top"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionNew_Graph">
    <property name="icon">
     <iconset resource="icons.qrc">
-     <normaloff>:/icons/toolbar/document-new.svg</normaloff>:/icons/toolbar/document-new.svg</iconset>
+     <normaloff>:/icons/Breeze/actions/toolbar/document-new.svg</normaloff>:/icons/Breeze/actions/toolbar/document-new.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;New Graph</string>
+   </property>
+  </action>
+  <action name="actionStart">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/Breeze/actions/toolbar/media-playback-start.svg</normaloff>:/icons/Breeze/actions/toolbar/media-playback-start.svg</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Start</string>
+   </property>
+  </action>
+  <action name="actionS_top">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/Breeze/actions/toolbar/media-playback-stop.svg</normaloff>:/icons/Breeze/actions/toolbar/media-playback-stop.svg</iconset>
+   </property>
+   <property name="text">
+    <string>S&amp;top</string>
    </property>
   </action>
  </widget>

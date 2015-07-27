@@ -1,10 +1,24 @@
 #include "graphshellgui.h"
+#include "core/boxes/textboxes.h"
+
+namespace graphshell
+{
+namespace gui
+{
+using namespace graphshell::boxes;
+
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    GraphManager *manager = GraphManager::getInstance();
+    GraphShell *shell = manager->newGraph("newshell");
+    QGraphicsScene *scene = new GraphViewScene(this, shell);
+
+    ui->graphicsView->setScene(scene);
 }
 
 MainWindow::~MainWindow()
@@ -14,7 +28,8 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_actionNew_Graph_triggered()
 {
-    GraphViewWidget* widget = new GraphViewWidget(this);
-    ui->tabWidget->addTab(widget, "New tab");
+    qDebug() << "lolilol";
+}
 
+}
 }

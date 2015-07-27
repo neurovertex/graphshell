@@ -10,12 +10,13 @@ namespace sockets {
 class TextInputSocket : public InputSocket {
     Q_OBJECT
 public:
-    explicit TextInputSocket(Box *box, size_t buffersize=4096);
+    explicit TextInputSocket(Box *box, QString name, size_t buffersize=4096);
     virtual bool canConnect(OutputSocket *socket);
+    QIODevice *getDevice() { return &buffer; }
 protected:
     virtual void disconnectSocket();
     virtual void connectSocket(Pipe *pipe);
-    explicit TextInputSocket(Box *box, DataType *type, size_t buffersize=4096);
+    explicit TextInputSocket(Box *box, DataType *type, QString name, size_t buffersize=4096);
 private:
     CircularBuffer buffer;
 };
@@ -26,11 +27,12 @@ class TextOutputSocket : public OutputSocket {
     friend class TextInputSocket;
     Q_OBJECT
 public:
-    explicit TextOutputSocket(Box *box);
+    explicit TextOutputSocket(Box *box, QString name);
+    QIODevice *getDevice() { return buffer; }
 protected:
+    explicit TextOutputSocket(Box *box, DataType *type, QString name);
     virtual void disconnectSocket();
     virtual void connectSocket(Pipe *pipe);
-    explicit TextOutputSocket(Box *box, DataType *type);
 private:
     CircularBuffer *buffer;
 };

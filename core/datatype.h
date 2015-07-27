@@ -15,15 +15,13 @@ namespace graphshell {
 	public:
         bool canAccept(DataType &t);
         QString& getName() { return name; }
-        bool subtypeOf(DataType& type);
+        bool subtypeOf(DataType* type);
 		static bool hasType(QString type) { return typeRegistry->contains(type); }
 		static DataType * getType(QString name);
-		static void initializeRegistry(QObject *parent = 0);
     private:
 		explicit DataType(QString name);
 		QString name;
-		static QMap<QString, DataType*> *typeRegistry;
-		static QObject *parent;
+        static QHash<QString, DataType*> *typeRegistry;
 	signals:
 
 	public slots:

@@ -3,14 +3,14 @@
 #include "../sockets.h"
 
 namespace graphshell {
-namespace stdsockets {
+namespace sockets {
 
 // ############# INPUT ############
 class InputSignalSocket : public InputSocket
 {
     Q_OBJECT
 public:
-    InputSignalSocket(Box *box, DataType *type);
+    InputSignalSocket(Box *box, DataType *type, QString name);
     bool canConnect(OutputSocket *socket) Q_DECL_OVERRIDE;
     const QVariant *getValue();
 protected:
@@ -29,17 +29,19 @@ class OutputSignalSocket : public OutputSocket
 {
     Q_OBJECT
 public:
-    OutputSignalSocket(Box *box, DataType *type, bool latch=true, QVariant *defval = nullptr);
+    OutputSignalSocket(Box *box, DataType *type, QString name, bool latch=true, QVariant *defval = nullptr);
     const QVariant *getValue() { return &lastVal; }
 private:
     bool latch;
     QVariant lastVal;
-    void send(const QVariant *value);
 protected:
     void disconnectSocket() Q_DECL_OVERRIDE;
     void connectSocket(Pipe *pipe) Q_DECL_OVERRIDE;
+public slots:
+    void send(const QVariant *value);
+    void sendVoid() {send(new QVariant());}
 signals:
-    void newValue(const QVariant *value);
+    void newValue(const QVariant *value = new QVariant());
 };
 
 }

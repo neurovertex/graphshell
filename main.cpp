@@ -1,67 +1,27 @@
 #include "main.h"
+#include "core/boxes/textboxes.h"
 
 using namespace graphshell;
-
-void WorkerThread::run() {
-    QFile in("./ipsum.txt");
-    if (!in.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        qDebug() << "Error !" << in.errorString();
-        return;
-    }
-
-    char *buf = new char[1025];
-    char delimiter = '\n';
-    int total = 0;
-    while (!in.atEnd()) {
-        int cnt = in.read(buf, 1024);
-        buffer->write(buf, cnt);
-        qDebug() << "written "<< cnt << " to buffer";
-        total += cnt;
-    }
-    in.close();
-    buffer->setEndOfStream();
-    qDebug() << "Finished writing. Total : "<< total;
-}
-
+using namespace graphshell::gui;
+using namespace graphshell::boxes;
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    /*MainWindow w;
-    w.show();*/
+    MainWindow w;
+    w.show();
 
-    /*GraphManager *manager = new GraphManager(&a);
-    qDebug() << manager->newGraph("YourMom");
-    foreach (GraphShell *shell, manager->getGraphs()) {
-        qDebug() << shell;
+
+    QFile file("ipsum.txt");
+    if (! file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        qWarning() << "Couldn't open file : "<< file.errorString();
+        qFatal("Error opening file");
     }
 
-    delete manager;*/
+    GraphShell *shell = GraphManager::getInstance()->getGraph("newshell");
+    Box *box = new TextReaderBox(&file);
+    shell->addBox(box);
+    box->setName("Reader box");
 
-    CircularBuffer buffer(&a, 512);
-    buffer.open();
-    WorkerThread *thread = new WorkerThread(&a, &buffer);
-    char *buf = new char[129];
-    qint64 total = 0;
-    QFile out("./ipsum_out.txt");
-    out.open(QIODevice::WriteOnly | QIODevice::Truncate | QIODevice::Text);
-    thread->start();
-
-    while (!buffer.atEnd()) {
-        if (!buffer.waitForReadyRead(-1))
-            continue;
-        QByteArray line = buffer.readLine();
-        qDebug() << "Read "<< line.length() <<" chars";
-        out.write(line);
-        out.putChar('\n');
-        total += line.length()+1;
-    }
-
-    buffer.close();
-
-    qDebug() << "Total read : "<< total;
-
-    a.quit();
-    return 0;
-    //return a.exec();
+    return a.exec();
 }

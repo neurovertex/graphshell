@@ -5,34 +5,48 @@
 
 
 namespace graphshell {
-	namespace boxes {
-        using namespace sockets;
+namespace boxes {
+using namespace sockets;
 
-        // ########## PRODUCER ############
-        class TextProducerBox : public Box
-        {
-        protected:
-            TextProducerBox(GraphShell *graph, TextOutputSocket *output = nullptr, QString outputName = "out");
-            TextOutputSocket *output;
-        };
+// ########## PROCESSOR ############
+class TextProcessorBox : public Box
+{
+    Q_OBJECT
+protected:
+    TextInputSocket *input;
+    TextOutputSocket *output;
+    TextProcessorBox(QString typeName, QString *inname=new QString("in"), QString *outname=new QString("out"));
+};
+
+// ########## READER ############
+class TextReaderBox : public TextProcessorBox
+{
+    Q_OBJECT
+public:
+    TextReaderBox(QIODevice *in, QString outputname = "out");
+private:
+    QIODevice *in;
+protected slots:
+    void onData();
+};
 
 
-        // ########## CONSUMER ############
-        class TextConsumerBox : public Box
-        {
-        protected:
-            TextConsumerBox(GraphShell *graph, TextInputSocket *input = nullptr, QString inputName = "in");
-            TextInputSocket *input;
-        };
 
+// ########## CONSUMER ############
+class TextPrinterBox : public TextProcessorBox
+{
+    Q_OBJECT
+public:
+    TextPrinterBox(QTextStream *out);
+protected:
+    virtual void run() Q_DECL_OVERRIDE;
+private:
+    QTextStream *out;
+protected slots:
+    void onData();
+};
 
-        // ########## CONSUMER ############
-        class TextProcessorBox : public TextConsumerBox, public TextProducerBox {
-        protected:
-            TextProcessorBox(GraphShell *graph) : TextConsumerBox(graph), TextProducerBox(graph) {}
-        };
-
-	}
+}
 }
 
 #endif // TEXTBOX_H

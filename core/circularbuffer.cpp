@@ -127,7 +127,7 @@ qint64 CircularBuffer::writeData(const char *from, qint64 count) {
 bool CircularBuffer::open(OpenMode mode)
 {
     if (!isOpen())
-        setOpenMode(ReadWrite | Text | Unbuffered);
+        setOpenMode(mode | ReadWrite | Text | Unbuffered);
     return true;
 }
 

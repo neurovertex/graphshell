@@ -18,7 +18,7 @@ We can see three kind of elements here :
 * Pipes. They link stuff.
 
 So that's supposed to do the same thing as the command, so what's the point ? Well here's non-exhaustive list of thing it adds:
-* Ever tried to do non-linear piping chain (like split the pipeline in two or something) in a shell ? It's a pain, because it's a command-*line* interface, thus it's by nature linear. GUI don't have that limitation.
+* Ever tried to do non-linear piping chain (like splitting the pipeline in two or something) in a shell ? It's a pain, because it's a command-*line* interface, thus it's by nature linear. GUI don't have that limitation.
 * Arbitrary number of inputs/outputs with actual typing. It's true text streams are a universal interface, but sometimes being able to send more complex kinds of data can be cool too.
 * Hot-Swappable pipes! Change the redirections while your stuff is running. You definitively can't do that (*easily*)  in a CLI.
 * Ability to save complex configuration
@@ -28,4 +28,4 @@ At the moment the project is barely in a sketch state. Planned feature include a
 Goal
 ----
 
-The purpose of this is not to replace shells altogether of course. It is to implement a new kind of script to run stuff that need to exchange data easily.
+The purpose of this is not to replace shells altogether of course. It is to implement a new kind of script to run stuff that need to exchange data easily, trying to port the ease of piping I/O in a shell to a graphical program.

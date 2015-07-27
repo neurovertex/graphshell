@@ -5,17 +5,63 @@ namespace boxes {
 using namespace sockets;
 
 // ########## PRODUCER ############
-TextProducerBox::TextProducerBox(GraphShell *graph, TextOutputSocket *output, QString outputName) : Box(graph)
+TextProcessorBox::TextProcessorBox(QString typeName, QString *inname, QString *outname) :
+    Box(typeName), input(nullptr), output(nullptr)
 {
-    this->output = (output != nullptr) ? output : new TextOutputSocket(this);
-    dataOutput.insert(outputName, output);
+    if (outname != nullptr) {
+        this->output = new TextOutputSocket(this, *outname);
+        addDataOutput(output);
+    }
+    if (inname != nullptr) {
+        this->input = new TextInputSocket(this, *inname);
+        addDataInput(input);
+    }
 }
 
-// ########## CONSUMER ############
-TextConsumerBox::TextConsumerBox(GraphShell *graph, TextInputSocket *input, QString inputName) : Box(graph)
+
+// ########## READER ############
+TextReaderBox::TextReaderBox(QIODevice *in, QString outputname) :
+    TextProcessorBox("TextReaderBox", nullptr, &outputname)
 {
-    this->input = (input != nullptr) ? input : new TextInputSocket(this);
-    dataInput.insert(inputName, input);
+    this->in = in;
+    connect(in, &QIODevice::readyRead, this, &TextReaderBox::onData);
+}
+
+void TextReaderBox::onData()
+{
+    while (in->bytesAvailable() > 0) {
+        QByteArray data = in->read(in->bytesAvailable());
+        if (output->isConnected())
+            output->getDevice()->write(data);
+    }
+}
+
+
+
+// ########## PRINTER ############
+TextPrinterBox::TextPrinterBox(QTextStream *out) :
+    TextProcessorBox("TextPrinterBox"), out(out)
+{
+    connect(this->input->getDevice(), &QIODevice::readyRead,
+            this, &TextPrinterBox::onData);
+
+}
+
+void TextPrinterBox::onData()
+{
+    QIODevice *dev = input->getDevice();
+    while (dev->bytesAvailable() > 0) {
+        QByteArray data = dev->read(dev->bytesAvailable());
+        *out << data;
+        if (output->isConnected())
+            output->getDevice()->write(data);
+    }
+
+}
+
+void TextPrinterBox::run()
+{
+    exec();
 }
 
 
