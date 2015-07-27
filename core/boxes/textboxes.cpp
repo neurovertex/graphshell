@@ -9,12 +9,12 @@ TextProcessorBox::TextProcessorBox(QString typeName, QString *inname, QString *o
     Box(typeName), input(nullptr), output(nullptr)
 {
     if (outname != nullptr) {
-        this->output = new TextOutputSocket(this, *outname);
-        addDataOutput(output);
+        this->output = new TextOutputSocket(*outname);
+        addSocket(output, DATA);
     }
     if (inname != nullptr) {
-        this->input = new TextInputSocket(this, *inname);
-        addDataInput(input);
+        this->input = new TextInputSocket(*inname);
+        addSocket(input, DATA);
     }
 }
 

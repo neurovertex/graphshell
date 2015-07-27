@@ -4,14 +4,14 @@ namespace graphshell {
 namespace sockets {
 
 // ############# INPUT ############
-TextInputSocket::TextInputSocket(Box *box, QString name, size_t buffersize) :
-    InputSocket(box, DataType::getType("/text/"), name), buffer(this, buffersize)
+TextInputSocket::TextInputSocket(QString name, size_t buffersize) :
+    InputSocket(DataType::getType("/text/"), name), buffer(this, buffersize)
 {
 }
 
 
-TextInputSocket::TextInputSocket(Box *box, DataType *type, QString name, size_t buffersize) :
-    InputSocket(box, type, name), buffer(this, buffersize)
+TextInputSocket::TextInputSocket(DataType *type, QString name, size_t buffersize) :
+    InputSocket(type, name), buffer(this, buffersize)
 {
 }
 
@@ -36,14 +36,14 @@ void TextInputSocket::connectSocket(Pipe *pipe)
 }
 
 // ############# OUTPUT ############
-TextOutputSocket::TextOutputSocket(Box *box, QString name) :
-    OutputSocket(box, DataType::getType("/text/"), name), buffer(nullptr)
+TextOutputSocket::TextOutputSocket(QString name) :
+    OutputSocket(DataType::getType("/text/"), name), buffer(nullptr)
 {
 }
 
 
-TextOutputSocket::TextOutputSocket(Box *box, DataType *type, QString name) :
-    OutputSocket(box, type, name), buffer(nullptr)
+TextOutputSocket::TextOutputSocket(DataType *type, QString name) :
+    OutputSocket(type, name), buffer(nullptr)
 {
 }
 

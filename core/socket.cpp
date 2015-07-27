@@ -13,16 +13,27 @@ namespace graphshell {
  * \param type the DataType of the Socket
  * \param name The name of the Socket
  */
-Socket::Socket(Box *parent, DataType *type, QString name) : QObject(parent)
+Socket::Socket(DataType *type, QString name) :
+    QObject()
 {
-    this->box = parent;
+    this->box = nullptr;
     this->type = type;
     setObjectName(name);
 }
 
-Socket::~Socket()
+void Socket::setParent(Box *box)
 {
+    if (this->box == nullptr) {
+        this->box = box;
+        QObject::setParent(box);
+    } else if (this->box == box)
+        qWarning() << "Socket "<< objectName() <<"'s parent has already been set";
+    else
+        qFatal("Cannot change a socket's parent");
 }
+
+Socket::~Socket()
+{}
 
 /*!
  * \brief Creates a new InputSocket
@@ -30,17 +41,22 @@ Socket::~Socket()
  * \param type The DataType of the Socket
  * \param name The name of the Socket
  */
-InputSocket::InputSocket(Box *box, DataType *type, QString name) :
-    Socket(box, type, name)
+InputSocket::InputSocket(DataType *type, QString name) :
+    Socket(type, name)
 {
-    connect(this, &InputSocket::socketConnected,
-            box, &Box::socketConnected);
-    connect(this, &InputSocket::socketDisconnected,
-            box, &Box::socketDisconnected);
 }
 
 InputSocket::~InputSocket()
 {
+}
+
+void InputSocket::setParent(Box *box)
+{
+    Socket::setParent(box);
+    connect(this, &InputSocket::socketConnected,
+            getBox(), &Box::socketConnected);
+    connect(this, &InputSocket::socketDisconnected,
+            getBox(), &Box::socketDisconnected);
 }
 
 /*!
@@ -84,17 +100,22 @@ void InputSocket::disconnectOutput() {
  * \param type The DataType of the Socket
  * \param name The name of the Socket
  */
-OutputSocket::OutputSocket(Box *box, DataType *type, QString name) :
-    Socket(box, type, name)
+OutputSocket::OutputSocket(DataType *type, QString name) :
+    Socket(type, name)
 {
-    connect(this, &OutputSocket::socketConnected,
-            box, &Box::socketConnected);
-    connect(this, &OutputSocket::socketDisconnected,
-            box, &Box::socketDisconnected);
 }
 
 OutputSocket::~OutputSocket()
 {
+}
+
+void OutputSocket::setParent(Box *box)
+{
+    Socket::setParent(box);
+    connect(this, &OutputSocket::socketConnected,
+            getBox(), &Box::socketConnected);
+    connect(this, &OutputSocket::socketDisconnected,
+            getBox(), &Box::socketDisconnected);
 }
 
 }

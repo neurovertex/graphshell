@@ -6,7 +6,9 @@ namespace sockets {
 
 // ########### INPUT ############
 
-InputSignalSocket::InputSignalSocket(Box *box, DataType *type, QString name) : InputSocket(box, type, name) {
+InputSignalSocket::InputSignalSocket(DataType *type, QString name) :
+    InputSocket(type, name)
+{
     if (!type->subtypeOf(DataType::getType("/signal/")))
         qFatal("InputSignalSocket can only have type 'signal' or a subtype of ");
 }
@@ -40,8 +42,8 @@ const QVariant *InputSignalSocket::getValue() {
 
 // ########### OUTPUT ############
 
-OutputSignalSocket::OutputSignalSocket(Box *box, DataType *type, QString name, bool latch, QVariant *defval) :
-    OutputSocket(box, type, name)
+OutputSignalSocket::OutputSignalSocket(DataType *type, QString name, bool latch, QVariant *defval) :
+    OutputSocket(type, name)
 {
     if (!latch && defval == nullptr)
         qFatal("Must define a value for non-latching signal sockets.");

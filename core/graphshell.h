@@ -93,16 +93,21 @@ private:
     QHash<QString, InputSocket*>	controlInput;
     QHash<QString, OutputSocket*> controlOutput;
     void setParent(GraphShell *shell);
+    void addInputSocket(InputSocket *socket, int flags = DATA);
+    void addOutputSocket(OutputSocket *socket, int flags = DATA);
 protected:
-    void addDataInput(InputSocket *socket);
-    void addDataOutput(OutputSocket *socket);
-    void addControlInput(InputSocket *socket);
-    void addControlOutput(OutputSocket  *socket);
+    template <class T>
+    T *addSocket(T *sock, int flags = DATA)
+    {
+        if (((Socket*)sock)->isInput())
+            addInputSocket((InputSocket*)sock, (flags | INPUT) & ~OUTPUT);
+        else
+            addOutputSocket((OutputSocket*)sock, (flags | OUTPUT) & ~INPUT);
+        return sock;
+    }
 
-    bool removeDataInput(InputSocket *socket);
-    bool removeDataOutput(OutputSocket *socket);
-    bool removeControlInput(InputSocket *socket);
-    bool removeControlOutput(OutputSocket *socket);
+    bool removeSocket(InputSocket *socket, int flags);
+    bool removeSocket(OutputSocket *socket, int flags);
 
     explicit Box(QString typeName, bool autostart = false);
     ~Box();

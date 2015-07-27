@@ -10,7 +10,7 @@ class InputSignalSocket : public InputSocket
 {
     Q_OBJECT
 public:
-    InputSignalSocket(Box *box, DataType *type, QString name);
+    InputSignalSocket(DataType *type, QString name);
     bool canConnect(OutputSocket *socket) Q_DECL_OVERRIDE;
     const QVariant *getValue();
 protected:
@@ -29,7 +29,7 @@ class OutputSignalSocket : public OutputSocket
 {
     Q_OBJECT
 public:
-    OutputSignalSocket(Box *box, DataType *type, QString name, bool latch=true, QVariant *defval = nullptr);
+    OutputSignalSocket(DataType *type, QString name, bool latch=true, QVariant *defval = nullptr);
     const QVariant *getValue() { return &lastVal; }
 private:
     bool latch;

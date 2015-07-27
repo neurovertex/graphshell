@@ -24,10 +24,10 @@ Box::Box(QString typeName, bool autostart) :
     setObjectName(typeName);
     this->autostart = autostart;
     shell = nullptr;
-    InputSignalSocket *start = new InputSignalSocket(this, DataType::getType("/signal/"), "start");
-    InputSignalSocket *stop = new InputSignalSocket(this, DataType::getType("/signal/"), "stop");
-    OutputSignalSocket *started = new OutputSignalSocket(this, DataType::getType("/signal/void/"), "started", false, new QVariant());
-    OutputSignalSocket *stopped = new OutputSignalSocket(this, DataType::getType("/signal/void/"), "stopped", false, new QVariant());
+    InputSignalSocket *start = new InputSignalSocket(DataType::getType("/signal/"), "start");
+    InputSignalSocket *stop = new InputSignalSocket(DataType::getType("/signal/"), "stop");
+    OutputSignalSocket *started = new OutputSignalSocket(DataType::getType("/signal/void/"), "started", false, new QVariant());
+    OutputSignalSocket *stopped = new OutputSignalSocket(DataType::getType("/signal/void/"), "stopped", false, new QVariant());
 
     connect(start, &InputSignalSocket::valueReceived, this, &Box::startBox);
     connect(stop, &InputSignalSocket::valueReceived, this, &Box::stopBox);
@@ -35,11 +35,11 @@ Box::Box(QString typeName, bool autostart) :
     connect(this, &Box::started, started, &OutputSignalSocket::sendVoid);
     connect(this, &Box::finished, stopped, &OutputSignalSocket::sendVoid);
 
-    controlInput.insert(start->objectName(), start);
-    controlInput.insert(stop->objectName(), stop);
+    addSocket(start, CONTROL);
+    addSocket(stop, CONTROL);
 
-    controlOutput.insert(started->objectName(), started);
-    controlOutput.insert(stopped->objectName(), stopped);
+    addSocket(started, CONTROL);
+    addSocket(stopped, CONTROL);
 }
 
 void Box::setParent(GraphShell *shell)
@@ -66,70 +66,61 @@ void Box::stopBox() {
 
 
 // ############ ADD ##############
-void Box::addDataInput(InputSocket *socket)
+void Box::addInputSocket(InputSocket *socket, int flags)
 {
-    if (dataInput.contains(socket->objectName()))
-        removeDataInput(socket);
-    dataInput.insert(socket->objectName(), socket);
-    emit socketAdded(socket, Box::INPUT | Box::DATA);
-}
-
-void Box::addDataOutput(OutputSocket *socket)
-{
-    if (dataOutput.contains(socket->objectName()))
-        removeDataOutput(socket);
-    dataOutput.insert(socket->objectName(), socket);
-    emit socketAdded(socket, Box::OUTPUT | Box::DATA);
-}
-
-void Box::addControlInput(InputSocket *socket)
-{
-    if (controlInput.contains(socket->objectName()))
-        removeControlInput(socket);
-    controlInput.insert(socket->objectName(), socket);
-    emit socketAdded(socket, Box::INPUT | Box::CONTROL);;
-}
-
-void Box::addControlOutput(OutputSocket *socket)
-{
-    if (controlOutput.contains(socket->objectName()))
-        removeControlOutput(socket);
-    controlOutput.insert(socket->objectName(), socket);
-    emit socketAdded(socket, Box::OUTPUT | Box::CONTROL);
+    QHash<QString, InputSocket*> &map = ((flags&Box::DATA) > 0 ? dataInput: controlInput);
+    if (map.value(socket->objectName()) == socket) {
+        qWarning() << "Socket "<< socket <<" has already been added to its parent box";
+    } else {
+        if (map.contains(socket->objectName())) {
+            removeSocket(map[socket->objectName()], flags);
+        }
+        map[socket->objectName()] = socket;
+        socket->setParent(this);
+        emit socketAdded(socket, flags);
+    }
 }
 
 
-// ############ REMOVE ##############
-bool Box::removeDataInput(InputSocket *socket)
+void Box::addOutputSocket(OutputSocket *socket, int flags)
 {
-    if (dataInput.remove(socket->objectName()) > 0) {
+    QHash<QString, OutputSocket*> &map = ((flags&Box::DATA) > 0 ? dataOutput : controlOutput);
+    if (map.value(socket->objectName()) == socket) {
+        qWarning() << "Socket "<< socket <<" has already been added to its parent box";
+    } else {
+        if (map.contains(socket->objectName())) {
+            removeSocket(map[socket->objectName()], flags);
+        }
+        map[socket->objectName()] = socket;
+        socket->setParent(this);
+        emit socketAdded(socket, flags);
+    }
+}
+
+bool Box::removeSocket(InputSocket *socket, int flags)
+{
+    if ((flags & Box::OUTPUT) > 0)
+        qFatal("Tried to remove InputSocket as Output");
+    QHash<QString, InputSocket*> &map = ((flags&Box::DATA) > 0 ? dataInput : controlInput);
+    if (!map.contains(socket->objectName()))
+        qWarning() << "Attempt at removing an absent socket";
+    else {
+        map.remove(socket->objectName());
         emit socketRemoved(socket);
         return true;
     }
     return false;
 }
 
-bool Box::removeDataOutput(OutputSocket *socket)
+bool Box::removeSocket(OutputSocket *socket, int flags)
 {
-    if (dataOutput.remove(socket->objectName()) > 0) {
-        emit socketRemoved(socket);
-        return true;
-    }
-    return false;
-}
-
-bool Box::removeControlInput(InputSocket *socket)
-{
-    if (controlInput.remove(socket->objectName()) > 0) {
-        emit socketRemoved(socket);
-        return true;
-    }
-    return false;
-}
-
-bool Box::removeControlOutput(OutputSocket *socket)
-{
-    if (controlOutput.remove(socket->objectName()) > 0) {
+    if ((flags & Box::OUTPUT) > 0)
+        qFatal("Tried to remove InputSocket as Output");
+    QHash<QString, InputSocket*> &map = ((flags&Box::DATA) > 0 ? dataInput : controlInput);
+    if (!map.contains(socket->objectName()))
+        qWarning() << "Attempt at removing an absent socket";
+    else {
+        map.remove(socket->objectName());
         emit socketRemoved(socket);
         return true;
     }
