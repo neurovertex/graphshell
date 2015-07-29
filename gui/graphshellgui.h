@@ -16,7 +16,7 @@ namespace gui
 {
 
 //########## MAINWINDOW ##########
-
+class GraphViewScene;
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -27,9 +27,10 @@ public:
 
 private slots:
     void on_actionNew_Graph_triggered();
-
+    void on_actionStart_triggered();
 private:
     Ui::MainWindow *ui;
+    GraphViewScene *graph;
 };
 
 
@@ -41,15 +42,17 @@ class GraphViewScene : public QGraphicsScene
 {
     Q_OBJECT
 public:
-    explicit GraphViewScene(MainWindow *window, GraphShell *shell);
-
+    explicit GraphViewScene(MainWindow &window, GraphShell &shell);
+    GraphShell &getShell() { return shell; }
 signals:
 
 public slots:
-    void boxAdded(Box* box);
-    void boxRemoved(Box *box);
+    void boxAdded(Box &box);
+    void boxRemoved(Box &box);
+protected:
+    void drawBackground(QPainter *painter, const QRectF &rect) Q_DECL_OVERRIDE;
 private:
-	GraphShell *shell;
+    GraphShell &shell;
     QHash<Box*, BoxGraphicsWidget*> boxes;
 };
 
@@ -61,22 +64,22 @@ class BoxGraphicsWidget : public QGraphicsWidget
 {
     Q_OBJECT
 public:
-    BoxGraphicsWidget(Box *box);
+    BoxGraphicsWidget(Box &box);
 protected:
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) Q_DECL_OVERRIDE;
     void contextMenuEvent(QGraphicsSceneContextMenuEvent *event) Q_DECL_OVERRIDE;
 private:
-    Box *box;
+    Box &box;
     QHash<Socket*, SocketGraphicsWidget*> sockets;
 
-    QGraphicsLinearLayout *dataInput;
-    QGraphicsLinearLayout *dataOutput;
-    QGraphicsLinearLayout *controlInput;
-    QGraphicsLinearLayout *controlOutput;
+    QGraphicsLinearLayout dataInput;
+    QGraphicsLinearLayout dataOutput;
+    QGraphicsLinearLayout controlInput;
+    QGraphicsLinearLayout controlOutput;
 public slots:
     void promptRename();
-    void socketAdded(Socket *s, int flags);
-    void socketRemoved(Socket *socket);
+    void socketAdded(Socket &s, unsigned int flags);
+    void socketRemoved(Socket &socket);
 };
 
 
@@ -86,13 +89,13 @@ class SocketGraphicsWidget : public QGraphicsWidget
 {
     Q_OBJECT
 public:
-    SocketGraphicsWidget(BoxGraphicsWidget *parentbox, Socket * socket, bool data, bool input);
+    SocketGraphicsWidget(BoxGraphicsWidget &parentbox, Socket & socket, bool data, bool input);
 protected:
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) Q_DECL_OVERRIDE;
     void contextMenuEvent(QGraphicsSceneContextMenuEvent *event) Q_DECL_OVERRIDE;
 private:
-    BoxGraphicsWidget *parent;
-    Socket *socket;
+    BoxGraphicsWidget &parent;
+    Socket &socket;
     bool isData;
     bool isInput;
 };

@@ -10,11 +10,11 @@ TextProcessorBox::TextProcessorBox(QString typeName, QString *inname, QString *o
 {
     if (outname != nullptr) {
         this->output = new TextOutputSocket(*outname);
-        addSocket(output, DATA);
+        addSocket(*output, DATA);
     }
     if (inname != nullptr) {
         this->input = new TextInputSocket(*inname);
-        addSocket(input, DATA);
+        addSocket(*input, DATA);
     }
 }
 
@@ -24,44 +24,72 @@ TextReaderBox::TextReaderBox(QIODevice *in, QString outputname) :
     TextProcessorBox("TextReaderBox", nullptr, &outputname)
 {
     this->in = in;
-    connect(in, &QIODevice::readyRead, this, &TextReaderBox::onData);
 }
 
-void TextReaderBox::onData()
+void TextReaderBox::run()
 {
-    while (in->bytesAvailable() > 0) {
-        QByteArray data = in->read(in->bytesAvailable());
-        if (output->isConnected())
-            output->getDevice()->write(data);
+    connect(in, &QIODevice::readyRead,
+            [=](){ this->exit(0); });
+    char *buf = new char[1024];
+    while (!in->atEnd()) {
+        in->waitForReadyRead(100);
+        while (in->bytesAvailable() > 0) {
+            auto size = in->read(buf, qMin((qint64)1024, in->bytesAvailable()));
+            if (output->isConnected())
+                output->getDevice()->write(buf, size);
+        }
+        if (!in->atEnd())
+            exec();
     }
+    delete buf;
+    output->getDevice()->setEndOfStream();
+    qDebug() << this <<": Finished reading input device";
+    stopBox();
 }
-
 
 
 // ########## PRINTER ############
-TextPrinterBox::TextPrinterBox(QTextStream *out) :
+TextPrinterBox::TextPrinterBox(QIODevice &out) :
     TextProcessorBox("TextPrinterBox"), out(out)
 {
-    connect(this->input->getDevice(), &QIODevice::readyRead,
+    qDebug() << this << " created with device "<< ((QFile&)out).fileName();
+    connect(&this->input->getDevice(), &QIODevice::readyRead,
             this, &TextPrinterBox::onData);
-
 }
 
 void TextPrinterBox::onData()
 {
-    QIODevice *dev = input->getDevice();
-    while (dev->bytesAvailable() > 0) {
-        QByteArray data = dev->read(dev->bytesAvailable());
-        *out << data;
+    QIODevice &dev = input->getDevice();
+    if (!out.isOpen())
+        qFatal("Output device isn't open");
+    while (dev.bytesAvailable() > 0) {
+        QByteArray data = dev.read(dev.bytesAvailable());
+        out.write(data);
         if (output->isConnected())
             output->getDevice()->write(data);
     }
+    if (input->getDevice().atEnd())
+        stopBox();
+}
 
+void TextPrinterBox::startBox()
+{
+    if (!out.isOpen())
+        if (!out.open(QIODevice::WriteOnly | QIODevice::Text))
+            return;
+    TextProcessorBox::startBox();
+}
+
+void TextPrinterBox::stopBox()
+{
+    TextProcessorBox::stopBox();
 }
 
 void TextPrinterBox::run()
 {
     exec();
+    out.waitForBytesWritten(-1);
+    out.close();
 }
 
 

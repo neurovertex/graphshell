@@ -16,7 +16,17 @@
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
-     <widget class="QGraphicsView" name="graphicsView"/>
+     <widget class="QGraphicsView" name="graphicsView">
+      <property name="renderHints">
+       <set>QPainter::Antialiasing|QPainter::TextAntialiasing</set>
+      </property>
+      <property name="cacheMode">
+       <set>QGraphicsView::CacheBackground</set>
+      </property>
+      <property name="resizeAnchor">
+       <enum>QGraphicsView::AnchorViewCenter</enum>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
@@ -26,7 +36,7 @@
      <x>0</x>
      <y>0</y>
      <width>1153</width>
-     <height>28</height>
+     <height>27</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">

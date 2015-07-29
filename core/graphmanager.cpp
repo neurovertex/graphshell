@@ -2,28 +2,28 @@
 
 namespace graphshell {
 
-GraphManager *GraphManager::instance = new GraphManager();
+GraphManager &GraphManager::instance = *new GraphManager();
 
 GraphManager::GraphManager() : QObject()
 {}
 
 /*!
-  \fn GraphManager::getInstance()
-  \brief returns the singleton instance of GraphManager
-*/
-
-/*!
- * \brief Creates a new GraphShell with the given name. If there already is
- * one with this name, nullptr is returned.
- * \param name name of the new GraphShell
- * \return A new Graphshell with the given name, or null if there already was one.
+ * \brief Creates a new GraphShell with the given name or returns an already existing one.
+ * \param name name of the desired GraphShell
+ * \param created if not null, will be set to true or false according to whether
+ * a new Graph has been created by the call
+ * \return a GraphShell with the given name
  */
-GraphShell * GraphManager::newGraph(QString name) {
-    if (graphs.contains(name))
-        return nullptr;
-    GraphShell *graph = new GraphShell(this, name);
-    graphs.insert(name, graph);
-    return graph;
+GraphShell &GraphManager::newGraph(QString name, bool *created) {
+    if (created != nullptr)
+        *created = false;
+    if (!graphs.contains(name)) {
+        graphs[name] = new GraphShell(*this, name);
+        if (created != nullptr)
+            *created = true;
+    }
+    return *graphs[name];
 }
+
 
 }

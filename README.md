@@ -1,4 +1,4 @@
-GraphShell
+GraphShell {#mainpage}
 ==========
 
 This is an attempt at a general-purpose shell with GUI designed to pipe data between programs as easily as possible. Basically the same thing you do in a command-line shell when you use IO redirection (|, >, < ...), but hopefully better.
@@ -29,3 +29,7 @@ Goal
 ----
 
 The purpose of this is not to replace shells altogether of course. It is to implement a new kind of script to run stuff that need to exchange data easily, trying to port the ease of piping I/O in a shell to a graphical program.
+
+-----------------
+
+[![Stories in Ready](https://badge.waffle.io/neurovertex/graphshell.png?label=ready&title=Ready)](http://waffle.io/neurovertex/graphshell)

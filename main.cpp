@@ -8,6 +8,7 @@ using namespace graphshell::boxes;
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+    qsrand(QDateTime::currentDateTime().toTime_t());
     MainWindow w;
     w.show();
 
@@ -18,10 +19,12 @@ int main(int argc, char *argv[])
         qFatal("Error opening file");
     }
 
-    GraphShell *shell = GraphManager::getInstance()->getGraph("newshell");
-    Box *box = new TextReaderBox(&file);
-    shell->addBox(box);
-    box->setName("Reader box");
+    GraphShell *shell = GraphManager::getInstance().getGraph("newshell");
+
+    Box *reader = new TextReaderBox(&file);
+    reader->setAutoStart(true);
+    shell->addBox(*reader);
+    reader->setObjectName("Reader");
 
     return a.exec();
 }

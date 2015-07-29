@@ -2,6 +2,11 @@
 
 namespace graphshell {
 
+/*!
+ * \brief Creates a new CircularBuffer with internal capacity buffersize.
+ * \param parent the parent QObject of this buffer
+ * \param buffersize Internal buffer size
+ */
 
 CircularBuffer::CircularBuffer(QObject *parent, quint32 buffersize) :
     QIODevice(parent)
@@ -15,6 +20,12 @@ CircularBuffer::CircularBuffer(QObject *parent, quint32 buffersize) :
     usedSize = 0;
 }
 
+/*!
+ * \brief Blocks the current thread at most msecs waiting for data available to read
+ * \param msecs The max time in miliseconds to wait for data. Beyond that, the function
+ * will timeout and return false.
+ * \return True if some data became available before timeout, false otherwise.
+ */
 bool CircularBuffer::waitForReadyRead(int msecs) {
     if (!isOpen())
         return false;
@@ -24,6 +35,13 @@ bool CircularBuffer::waitForReadyRead(int msecs) {
     return isOpen() && usedSize > 0;
 }
 
+/*!
+ * \brief Blocks the current thread at most msecs waiting for all data in the
+ * buffer to be freed
+ * \param msecs The max time in miliseconds to wait. Beyond that, the function
+ *  will timeout and return false.
+ * \return True if all data was written before the timeout, false otherwise.
+ */
 bool CircularBuffer::waitForBytesWritten(int msecs) {
     if (!isOpen())
         return false;
@@ -33,6 +51,13 @@ bool CircularBuffer::waitForBytesWritten(int msecs) {
     return isOpen() && usedSize == 0;
 }
 
+/*!
+ * \brief Implements QIODevice::readData(). Reads as much data as possible until 'count'
+ * \param to Buffer to write data to
+ * \param count max data to be read.
+ * \return Actual number of bytes read. If less than count, no more data was available,
+ * which means the buffer was closed.
+ */
 qint64 CircularBuffer::readData(char *to, qint64 count) {
     if (!isOpen())
         return -1;
@@ -60,7 +85,16 @@ qint64 CircularBuffer::readData(char *to, qint64 count) {
     return total;
 }
 
-qint64 CircularBuffer::readUntil(char *to, int count, char delimiter) {
+/*!
+ * \brief Reads as much data as possible until either 'count' characters is reached,
+ * or 'delimiter' is found
+ * \param to Buffer to write data to
+ * \param count max data to be read.
+ * \param delimiter
+ * \return Actual number of bytes read. If less than count, that means either delimiter
+ * was found or the buffer was closed.
+ */
+qint64 CircularBuffer::readUntil(char to[], int count, char delimiter) {
     if (!isOpen())
         return -1;
     QMutexLocker locker(&mutex);
@@ -95,9 +129,13 @@ qint64 CircularBuffer::readUntil(char *to, int count, char delimiter) {
     return total;
 }
 
-
+/*!
+ * \brief Implemnets QIODevice::writeData. Write as much data as possible to the buffer
+ * \param from Char buffer to get data from
+ * \param count Max data to write to the buffer
+ * \return Actual number of chars written. If less than count, that means the buffer was closed
+ */
 qint64 CircularBuffer::writeData(const char *from, qint64 count) {
-    endHead = size+1;
     if (!isOpen())
         return -1;
     QMutexLocker locker(&mutex);
@@ -124,13 +162,32 @@ qint64 CircularBuffer::writeData(const char *from, qint64 count) {
 }
 
 
+/*!
+ * \brief Implmeents QIODevice::open marks the buffer as readable/writable. Also resets
+ * the buffer to an empty state.
+ * \param mode This parameter is ignored. The buffer is systematically opened with
+ * ReadWrite | Text | Unbuffered
+ * \return false if already open, true otherwise.
+ */
 bool CircularBuffer::open(OpenMode mode)
 {
-    if (!isOpen())
-        setOpenMode(mode | ReadWrite | Text | Unbuffered);
+
+    if (isOpen())
+        return false;
+    Q_UNUSED(mode)
+    readHead = writeHead = 0;
+    endHead = ULONG_MAX;
+    freeSize = size;
+    usedSize = 0;
+    setOpenMode(ReadWrite | Text | Unbuffered);
     return true;
 }
 
+/*!
+ * \brief Implements QIODevice::close. Sets the openMode to NotOpen, then wakes up all
+ * waiting threads. This should *ONLY* be called from the reading thread. The writing thread
+ * should call setEndOfStream() instead, to let the reader read any data left before closing.
+ */
 void CircularBuffer::close()
 {
     if (isOpen()) {
@@ -140,10 +197,19 @@ void CircularBuffer::close()
     }
 }
 
+/*!
+ * \brief Implements QIODevice::atEnd. Tests whether we're at the end of the stream.
+ * \return True if the readHead is currently at the end of the readable data. See setEndOfStream()
+ */
 bool CircularBuffer::atEnd() const {
-    return endHead == readHead;
+    return endHead <= readHead;
 }
 
+/*!
+ * \brief Marks the current writeHead as the end of data for this stream. This allows the buffer to
+ * act like a file and notify the reading thread when whatever was producing data is done doing so.
+ * No data should be written past this.
+ */
 void CircularBuffer::setEndOfStream()
 {
     QMutexLocker locker(&mutex);
@@ -152,6 +218,12 @@ void CircularBuffer::setEndOfStream()
     qDebug() << "Setting endHead to "<< endHead <<"("<< writeHead <<")";
 }
 
+/*!
+ * \brief Implements QIODevice::readLineData. Reads data (at most maxlen) until a \n is found.
+ * \param data Buffer to write data to
+ * \param maxlen Maximum number of chars to read
+ * \return actual number of chars read
+ */
 qint64 CircularBuffer::readLineData(char *data, qint64 maxlen)
 {
     return readUntil(data, maxlen);

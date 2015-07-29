@@ -11,12 +11,12 @@ class TextInputSocket : public InputSocket {
     Q_OBJECT
 public:
     explicit TextInputSocket(QString name, size_t buffersize=4096);
-    virtual bool canConnect(OutputSocket *socket);
-    QIODevice *getDevice() { return &buffer; }
+    virtual bool canConnect(OutputSocket &socket);
+    QIODevice &getDevice() { return buffer; }
 protected:
     virtual void disconnectSocket();
-    virtual void connectSocket(Pipe *pipe);
-    explicit TextInputSocket(DataType *type, QString name, size_t buffersize=4096);
+    virtual void connectSocket(Pipe &pipe);
+    explicit TextInputSocket(DataType &type, QString name, size_t buffersize=4096);
 private:
     CircularBuffer buffer;
 };
@@ -28,11 +28,11 @@ class TextOutputSocket : public OutputSocket {
     Q_OBJECT
 public:
     explicit TextOutputSocket(QString name);
-    QIODevice *getDevice() { return buffer; }
+    CircularBuffer *getDevice() { return buffer; }
 protected:
-    explicit TextOutputSocket(DataType *type, QString name);
+    explicit TextOutputSocket(DataType &type, QString name);
     virtual void disconnectSocket();
-    virtual void connectSocket(Pipe *pipe);
+    virtual void connectSocket(Pipe &pipe);
 private:
     CircularBuffer *buffer;
 };

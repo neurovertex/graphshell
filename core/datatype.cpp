@@ -2,7 +2,7 @@
 
 namespace graphshell {
 
-QHash<QString, DataType *> *DataType::typeRegistry = new QHash<QString, DataType *>();
+QHash<QString, DataType *> DataType::typeRegistry = QHash<QString, DataType *>();
 
 /*!
  * \brief Creates a new DataType from a name.
@@ -10,7 +10,7 @@ QHash<QString, DataType *> *DataType::typeRegistry = new QHash<QString, DataType
  */
 DataType::DataType(QString name) : QObject()
 {
-    this->name = name;
+    setObjectName(name);
 }
 
 /*!
@@ -20,7 +20,7 @@ DataType::DataType(QString name) : QObject()
  * \return True if a and b designate the same DataType. False otherwise
  */
 bool operator==(DataType& a, DataType& b) {
-    return a.getName() == b.getName();
+    return a.objectName() == b.objectName();
 }
 
 /*!
@@ -30,8 +30,21 @@ bool operator==(DataType& a, DataType& b) {
  * \param type Pointer to the DataType to test for parenthood
  * \return true if type IS the fath- ... I mean supertype
  */
-bool DataType::subtypeOf(DataType* type) {
-    return name.startsWith(type->getName());
+
+bool DataType::subtypeOf(DataType& type) {
+    return objectName().startsWith(type.objectName());
+}
+
+/*!
+ * \brief Tests whether a consumer of type this can accept data of type t. For now,
+ * it only tests whether t is a subType of this, but custom functions may be implemented
+ * later to support more complex datatype compatibility management.
+ * \param t
+ * \return
+ */
+bool DataType::canAccept(DataType &t)
+{
+    return t.subtypeOf(*this);
 }
 
 /*!
@@ -44,7 +57,7 @@ bool DataType::subtypeOf(DataType* type) {
  * \throws QString if the name cannot be made valid (if it contains non-alphabetic characters
  * or multiple subsequent slashes.
  */
-DataType *DataType::getType(QString name)
+DataType &DataType::getType(QString name)
 {
     static QRegExp validName("^/?([a-z]|[a-z]/)+$", Qt::CaseInsensitive);
     if (!validName.exactMatch(name)) {
@@ -52,24 +65,30 @@ DataType *DataType::getType(QString name)
         throw error.toStdString().c_str();
     }
 
-    QString normalized = name.toLower();
-
-    if (!normalized.startsWith('/'))
-        normalized = '/' + normalized;
-    if (!normalized.endsWith('/'))
-        normalized = normalized + '/';
+    QString normalized = validate(name);
 
     if (normalized != name) {
         qWarning() << "Warning : passed invalid datatype name : "+ name +". Normalizing to "+ normalized;
         name = name.toLower();
     }
-    DataType *type = typeRegistry->value(normalized, nullptr);
+    DataType *type = typeRegistry.value(normalized, nullptr);
 
     if (type == nullptr) {
         type = new DataType(normalized);
-        typeRegistry->insert(normalized, type);
+        typeRegistry.insert(normalized, type);
     }
-    return type;
+    return *type;
+}
+
+QString DataType::validate(const QString &in)
+{
+    QString normalized = in.toLower();
+
+    if (!normalized.startsWith('/'))
+        normalized = '/' + normalized;
+    if (!normalized.endsWith('/'))
+        normalized = normalized + '/';
+    return normalized;
 }
 
 

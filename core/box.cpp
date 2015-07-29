@@ -3,20 +3,12 @@
 
 namespace graphshell {
 using namespace graphshell::sockets;
-/*!
- * \class Box
- * \brief Base class for the nodes of the execution graph
- * \ingroup Core
- * \ingroup Boxes
- *
- * This class is the basis of all processing in GraphShell. It has I/O sockets for
- * exchanging information with other boxes. Sockets are divided into 2 categories :
- * "Data" Input/Output sockets are for the process of the box to consume/process/produce
- * "Control" Input/Output sockets are "meta" to the box : they control its execution
- * and give information about it to other boxes. Although this is a purely conceptual
- * difference, in practice boxes may  be redefined to use either as desired.
- */
 
+/*!
+ * \brief Creates a new Box, adds the general input (start, stop) and output (started, stopped) control (signal) sockets.
+ * \param typeName Box::typeName
+ * \param autostart Box::autostart
+ */
 Box::Box(QString typeName, bool autostart) :
     QThread()
 {
@@ -35,18 +27,24 @@ Box::Box(QString typeName, bool autostart) :
     connect(this, &Box::started, started, &OutputSignalSocket::sendVoid);
     connect(this, &Box::finished, stopped, &OutputSignalSocket::sendVoid);
 
-    addSocket(start, CONTROL);
-    addSocket(stop, CONTROL);
+    addSocket(*start, CONTROL);
+    addSocket(*stop, CONTROL);
 
-    addSocket(started, CONTROL);
-    addSocket(stopped, CONTROL);
+    addSocket(*started, CONTROL);
+    addSocket(*stopped, CONTROL);
 }
 
-void Box::setParent(GraphShell *shell)
+/*!
+ * \brief Sets this Box's parent shell to the given GraphSell. Note that, for threading
+ * reasons, this will not call QObject::setParent(). This causes a fatal error if the Box
+ * already had a parent.
+ * \param shell The new parent.
+ */
+void Box::setParent(GraphShell &shell)
 {
     if (this->shell == nullptr)
-        this->shell = shell;
-    else if (this->shell == shell)
+        this->shell = &shell;
+    else if (this->shell == &shell)
         qWarning() << "Box "<< objectName() <<"'s parent has already been set";
     else
         qFatal("Cannot change a box's parent");
@@ -55,72 +53,86 @@ void Box::setParent(GraphShell *shell)
 Box::~Box()
 {
 }
-
 void Box::startBox() {
+    qDebug() << this << " start requested";
+    moveToThread(this);
     this->start();
 }
 
 void Box::stopBox() {
+    qDebug() << this << " stop requested";
     this->exit();
 }
 
-
 // ############ ADD ##############
-void Box::addInputSocket(InputSocket *socket, int flags)
+void Box::addInputSocket(InputSocket &socket, unsigned int flags)
 {
     QHash<QString, InputSocket*> &map = ((flags&Box::DATA) > 0 ? dataInput: controlInput);
-    if (map.value(socket->objectName()) == socket) {
-        qWarning() << "Socket "<< socket <<" has already been added to its parent box";
+    if (map.value(socket.objectName()) == &socket) {
+        qWarning() << "Socket "<< &socket <<" has already been added to its parent box";
     } else {
-        if (map.contains(socket->objectName())) {
-            removeSocket(map[socket->objectName()], flags);
+        if (map.contains(socket.objectName())) {
+            removeSocket(*map[socket.objectName()], flags);
         }
-        map[socket->objectName()] = socket;
-        socket->setParent(this);
+        map[socket.objectName()] = &socket;
+        socket.setParent(*this);
+
         emit socketAdded(socket, flags);
     }
 }
 
 
-void Box::addOutputSocket(OutputSocket *socket, int flags)
+void Box::addOutputSocket(OutputSocket &socket, unsigned int flags)
 {
     QHash<QString, OutputSocket*> &map = ((flags&Box::DATA) > 0 ? dataOutput : controlOutput);
-    if (map.value(socket->objectName()) == socket) {
-        qWarning() << "Socket "<< socket <<" has already been added to its parent box";
+    if (map.value(socket.objectName()) == &socket) {
+        qWarning() << "Socket "<< &socket <<" has already been added to its parent box";
     } else {
-        if (map.contains(socket->objectName())) {
-            removeSocket(map[socket->objectName()], flags);
+        if (map.contains(socket.objectName())) {
+            removeSocket(*map[socket.objectName()], flags);
         }
-        map[socket->objectName()] = socket;
-        socket->setParent(this);
+        map[socket.objectName()] = &socket;
+        socket.setParent(*this);
         emit socketAdded(socket, flags);
     }
 }
 
-bool Box::removeSocket(InputSocket *socket, int flags)
+/*!
+ * \brief Removes a socket from the box according to flags. The socket is deleted after this.
+ * \param sock the Socket to add
+ * \param flags sets whether the socket is data (Box::DATA) or control (Box::CONTROL).
+ * Box::INPUT and Box::OUTPUT flags are ignored and deduced from Socket::isInput()
+ * \return true if the socket was successfully removed (i.e if it was actually present)
+ */
+bool Box::removeSocket(Socket &sock, unsigned int flags)
 {
-    if ((flags & Box::OUTPUT) > 0)
-        qFatal("Tried to remove InputSocket as Output");
+    if (sock.isInput())
+        return removeInputSocket((InputSocket&)sock, (flags | INPUT) & ~OUTPUT);
+    else
+        return removeOutputSocket((OutputSocket&)sock, (flags | OUTPUT) & ~INPUT);
+    delete &sock;
+}
+
+bool Box::removeInputSocket(InputSocket &socket, unsigned int flags)
+{
     QHash<QString, InputSocket*> &map = ((flags&Box::DATA) > 0 ? dataInput : controlInput);
-    if (!map.contains(socket->objectName()))
+    if (!map.contains(socket.objectName()))
         qWarning() << "Attempt at removing an absent socket";
     else {
-        map.remove(socket->objectName());
+        map.remove(socket.objectName());
         emit socketRemoved(socket);
         return true;
     }
     return false;
 }
 
-bool Box::removeSocket(OutputSocket *socket, int flags)
+bool Box::removeOutputSocket(OutputSocket &socket, unsigned int flags)
 {
-    if ((flags & Box::OUTPUT) > 0)
-        qFatal("Tried to remove InputSocket as Output");
     QHash<QString, InputSocket*> &map = ((flags&Box::DATA) > 0 ? dataInput : controlInput);
-    if (!map.contains(socket->objectName()))
+    if (!map.contains(socket.objectName()))
         qWarning() << "Attempt at removing an absent socket";
     else {
-        map.remove(socket->objectName());
+        map.remove(socket.objectName());
         emit socketRemoved(socket);
         return true;
     }

@@ -12,6 +12,9 @@ using namespace sockets;
 class TextProcessorBox : public Box
 {
     Q_OBJECT
+public:
+    TextInputSocket *getTextInput() { return input; }
+    TextOutputSocket *getTextOutput() { return output; }
 protected:
     TextInputSocket *input;
     TextOutputSocket *output;
@@ -24,10 +27,11 @@ class TextReaderBox : public TextProcessorBox
     Q_OBJECT
 public:
     TextReaderBox(QIODevice *in, QString outputname = "out");
+protected:
+    void run();
 private:
     QIODevice *in;
 protected slots:
-    void onData();
 };
 
 
@@ -37,13 +41,15 @@ class TextPrinterBox : public TextProcessorBox
 {
     Q_OBJECT
 public:
-    TextPrinterBox(QTextStream *out);
+    TextPrinterBox(QIODevice &out);
 protected:
     virtual void run() Q_DECL_OVERRIDE;
 private:
-    QTextStream *out;
+    QIODevice &out;
 protected slots:
     void onData();
+    void startBox() Q_DECL_OVERRIDE;
+    void stopBox() Q_DECL_OVERRIDE;
 };
 
 }

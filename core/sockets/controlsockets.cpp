@@ -6,43 +6,44 @@ namespace sockets {
 
 // ########### INPUT ############
 
-InputSignalSocket::InputSignalSocket(DataType *type, QString name) :
+InputSignalSocket::InputSignalSocket(DataType &type, QString name) :
     InputSocket(type, name)
 {
-    if (!type->subtypeOf(DataType::getType("/signal/")))
+    if (!type.subtypeOf(DataType::getType("/signal/")))
         qFatal("InputSignalSocket can only have type 'signal' or a subtype of ");
 }
 
-bool InputSignalSocket::canConnect(OutputSocket *socket) {
-    return socket->getType()->subtypeOf(DataType::getType("/signal/"));
+bool InputSignalSocket::canConnect(OutputSocket &socket) {
+    return socket.getType().subtypeOf(DataType::getType("/signal/"));
 }
 
-void InputSignalSocket::receiveValue(const QVariant *value) {
-    emit valueReceived(this, value);
+void InputSignalSocket::receiveValue(const QVariant &value) {
+    emit valueReceived(*this, value);
 }
 
-void InputSignalSocket::connectSocket(Pipe *pipe)
+void InputSignalSocket::connectSocket(Pipe &pipe)
 {
     if (isConnected())
         disconnectSocket();
-    connectingPipe = pipe;
+    connectingPipe = &pipe;
     connectOutput();
-    emit socketConnected(this);
+    emit socketConnected(*this);
 }
 
 void InputSignalSocket::disconnectSocket() {
-    emit socketDisconnected(this);
+    emit socketDisconnected(*this);
     disconnectOutput();
     connectingPipe = nullptr;
 }
 
 const QVariant *InputSignalSocket::getValue() {
-    return isConnected() ? static_cast<OutputSignalSocket*>(connectingPipe->getOutput())->getValue() : nullptr;
+    return isConnected() ? &static_cast<OutputSignalSocket&>(connectingPipe->getOutput()).getValue() : nullptr;
 }
 
 // ########### OUTPUT ############
+const QVariant OutputSignalSocket::VOIDSIGNAL = QVariant();
 
-OutputSignalSocket::OutputSignalSocket(DataType *type, QString name, bool latch, QVariant *defval) :
+OutputSignalSocket::OutputSignalSocket(DataType &type, QString name, bool latch, QVariant *defval) :
     OutputSocket(type, name)
 {
     if (!latch && defval == nullptr)
@@ -51,25 +52,28 @@ OutputSignalSocket::OutputSignalSocket(DataType *type, QString name, bool latch,
     this->latch = latch;
 }
 
-void OutputSignalSocket::send(const QVariant *value) {
+void OutputSignalSocket::send(const QVariant &value)
+{
     if (latch)
-        this->lastVal = *value;
+        this->lastVal = value;
     emit newValue(value);
 }
 
-void OutputSignalSocket::connectSocket(Pipe *pipe) {
+void OutputSignalSocket::connectSocket(Pipe &pipe)
+{
     if (isConnected())
         disconnectSocket();
-    connectingPipe = pipe;
-    connect(this,	SIGNAL(newValue(const QVariant*)),
-            static_cast<InputSignalSocket*>(pipe->getInput()), SLOT(receiveValue(QVariant*)));
-    emit socketConnected(this);
+    connectingPipe = &pipe;
+    connect(this,	&OutputSignalSocket::newValue,
+            static_cast<InputSignalSocket*>(&pipe.getInput()), &InputSignalSocket::receiveValue);
+    emit socketConnected(*this);
 }
 
-void OutputSignalSocket::disconnectSocket() {
-    emit socketDisconnected(this);
-    disconnect(this, SIGNAL(newValue(const QVariant*)),
-               static_cast<InputSignalSocket*>(connectingPipe->getInput()), SLOT(receiveValue(QVariant*)));
+void OutputSignalSocket::disconnectSocket()
+{
+    emit socketDisconnected(*this);
+    disconnect(this, SIGNAL(newValue(const QVariant&)),
+               static_cast<InputSignalSocket*>(&connectingPipe->getInput()), SLOT(receiveValue(QVariant&)));
     connectingPipe = nullptr;
 }
 

@@ -6,3 +6,4 @@
 *.autosave
 doc/html
 doc/latex
+*.log

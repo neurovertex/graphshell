@@ -1,14 +1,14 @@
 
 SOURCES += core/graphmanager.cpp \
-        core/graph.cpp \
         core/pipe.cpp \
-        core/socket.cpp \
     $$PWD/box.cpp \
     $$PWD/datatype.cpp \
     $$PWD/circularbuffer.cpp \
     $$PWD/boxes/textboxes.cpp \
     $$PWD/sockets/controlsockets.cpp \
-    $$PWD/sockets/textsockets.cpp
+    $$PWD/sockets/textsockets.cpp \
+    $$PWD/graphshell.cpp \
+    $$PWD/sockets.cpp
 
 HEADERS += core/graphshell.h \
     $$PWD/sockets.h \

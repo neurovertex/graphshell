@@ -7,15 +7,13 @@ namespace gui
 {
 
 
-SocketGraphicsWidget::SocketGraphicsWidget(BoxGraphicsWidget *parentbox, Socket *socket, bool data, bool input) :
-    QGraphicsWidget(parentbox)
+SocketGraphicsWidget::SocketGraphicsWidget(BoxGraphicsWidget &parentbox, Socket &socket, bool data, bool input) :
+    QGraphicsWidget(&parentbox), parent(parentbox), socket(socket), isData(data), isInput(input)
 {
-    this->parent = parentbox;
-    this->socket = socket;
-    this->isData = data;
-    this->isInput = input;
     setMaximumSize(10, 10);
-    setToolTip(socket->metaObject()->className());
+    QString type = socket.metaObject()->className();
+    type = type.replace("graphshell::sockets::", "");
+    setToolTip(socket.objectName() +" ("+ type +")");
 }
 
 void SocketGraphicsWidget::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
@@ -39,6 +37,7 @@ void SocketGraphicsWidget::paint(QPainter *painter, const QStyleOptionGraphicsIt
 
 void SocketGraphicsWidget::contextMenuEvent(QGraphicsSceneContextMenuEvent *event)
 {
+    Q_UNUSED(event)
     // TODO
 }
 

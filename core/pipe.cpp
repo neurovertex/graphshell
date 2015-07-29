@@ -3,24 +3,16 @@
 namespace graphshell {
 
 /*!
- * \class Pipe::Pipe
- * \brief The Pipe class represents a connection between two sockets. It will connect the given Input
- * and Output sockets upon creation and disconnect them upon deletion. It does not, however, actively
- * participate in any exchange of data or signals between the two.
-*/
-
-/*!
  * \brief Creates a Pipe object to represent the connection between input and output. This will call
  * InputSocket::connectSocket(Pipe*)
- * \param parent
- * \param input
- * \param output
+ * \param parent The parent GraphShell of the Pipe (for memory management)
+ * \param input the data consumer
+ * \param output the data producer
  */
-Pipe::Pipe(GraphShell *parent, InputSocket *input, OutputSocket *output) : QObject(parent)
+Pipe::Pipe(GraphShell &parent, InputSocket &input, OutputSocket &output) :
+    QObject(&parent), input(input), output(output)
 {
-    this->input = input;
-    this->output = output;
-    input->connectSocket(this);
+    input.connectSocket(*this);
 }
 
 /*!
@@ -28,7 +20,7 @@ Pipe::Pipe(GraphShell *parent, InputSocket *input, OutputSocket *output) : QObje
  */
 Pipe::~Pipe()
 {
-    input->disconnectSocket();
+    input.disconnectSocket();
 }
 }
 
